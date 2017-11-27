@@ -2,14 +2,15 @@
 Simple and fast integration of the perso / custom [Smiirl](http://www.smiirl.com/fr/) counter.
 This repo let you show custom number in your custom smiirl counter, and add simple possibility to edit the number with a basic user interface ([folder edit](edit/)).
 
-Edit actions are logged.
+Edit actions are logged in [log-server.log](edit/log-server.log).
+
 Edit actions are :
-- Add number from value
-- Remove number from value
+- Add number from existing value
+- Remove number from existing value
 - Erase number with new value
 - Reset number to zero
 
-## Pré-requis
+## Requirements
 - [Nginx](https://nginx.org/en/) or [Apache](https://httpd.apache.org/)
 - PHP 7+
 
