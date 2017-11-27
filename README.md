@@ -21,12 +21,14 @@ If you decide to change KEY_NAME and NAME_JSON_FILE please create a .json file w
 
 ## Installation
 - Just upload files where you want. Exemple like here : 'http://your-domaine-name.com/Smiirl/' (at the root domaine name, in a 'Smiirl' folder)
-* config/
-* edit/
-* template/
-* .htaccess
-* index.php
-* number.json (or the file name you choose)
+```
+config/
+edit/
+template/
+index.php
+number.json (or the file name you choose)
+.htaccess
+```
 
 - Go to your Smiirl Account and specify your configuration to smiirl (If you follow the exemple bellow, specify http://your-domaine-name.com/Smiirl/ as URL)
 
