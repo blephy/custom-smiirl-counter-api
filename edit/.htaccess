@@ -1,0 +1,3 @@
+#AuthType Basic
+#AuthUserFile "/home/dbcrenovmz/www/smiirl/edit/.htpasswd"
+#Require valid-user

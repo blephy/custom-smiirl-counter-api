@@ -1,0 +1,12 @@
+# Redirect HTTPS
+#<IfModule mod_rewrite.c>
+#RewriteEngine on
+#RewriteCond %{HTTPS} !=on [NC]
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+#</IfModule>
+
+<files number.json>
+Order Deny,Allow
+Deny from all
+</files>
+Options All -Indexes
