@@ -1,5 +1,6 @@
 # simple-smiirl-counter
 Simple and fast integration of the perso / custom [Smiirl](http://www.smiirl.com/fr/) counter.
+This repo let you show custom number in your custom smiirl counter, and add simple possibility to edit the number with a basic user interface ([folder edit](edit/)). 
 
 ## Pré-requis
 - [Nginx](https://nginx.org/en/) or [Apache](https://httpd.apache.org/)
