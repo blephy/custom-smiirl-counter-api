@@ -2,7 +2,7 @@
 Simple and fast integration of the perso / custom [Smiirl](http://www.smiirl.com/fr/) counter.
 
 ## Pré-requis
-- [Nginx](https://nginx.org/en/) ou [Apache](https://httpd.apache.org/)
+- [Nginx](https://nginx.org/en/) or [Apache](https://httpd.apache.org/)
 - PHP 7+
 
 ## Smiirl Documentation
@@ -21,12 +21,12 @@ If you decide to change KEY_NAME and NAME_JSON_FILE please create a .json file w
 
 ## Installation
 - Just upload files where you want. Exemple like here : 'http://your-domaine-name.com/Smiirl/' (at the root domaine name, in a 'Smiirl' folder)
-> config/
-> edit/
-> template/
-> .htaccess
-> index.php
-> number.json (or the file name you choose)
+* config/
+* edit/
+* template/
+* .htaccess
+* index.php
+* number.json (or the file name you choose)
 
 - Go to your Smiirl Account and specify your configuration to smiirl (If you follow the exemple bellow, specify http://your-domaine-name.com/Smiirl/ as URL)
 
