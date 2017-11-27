@@ -12,6 +12,8 @@ This repo let you **show custom number** in your custom smiirl counter, and add 
 
 This repository is in operation at [dbcrenovation.fr](//dbcrenovation.fr/smiirl/)
 
+![Screenshot edit smiirl counter interface](screenshot.png)
+
 ## Requirements
 - [Nginx](https://nginx.org/en/) or [Apache](https://httpd.apache.org/)
 - PHP 7+
