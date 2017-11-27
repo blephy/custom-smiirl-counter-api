@@ -1,10 +1,10 @@
 # simple-smiirl-counter
 Simple and fast integration of the perso / custom [Smiirl](http://www.smiirl.com/fr/) counter.
-This repo let you show custom number in your custom smiirl counter, and add simple possibility to edit the number with a basic user interface ([folder edit](edit/)).
+This repo let you **show custom number** in your custom smiirl counter, and add **simple possibility to edit the number** with a basic user interface ([folder edit](edit/)).
 
-Edit actions are logged in [log-server.log](edit/log-server.log).
+**Edit actions are logged in** [log-server.log](edit/log-server.log).
 
-Edit actions are :
+**Edit actions are :**
 - Add number from existing value
 - Remove number from existing value
 - Erase number with new value
@@ -28,10 +28,10 @@ $_KEY_NAME // the name of the key relative to the number in your .json file
 $_ACTIVE_EASTER_EGGS // Active easter eggs after submitting new number value
 ```
 
-If you decide to change KEY_NAME and NAME_JSON_FILE please create a .json file with your content.
+**If you decide to change KEY_NAME and NAME_JSON_FILE please create a .json file with your content.**
 
 ## Installation
-- Just upload files where you want. Exemple like here : 'http://your-domaine-name.com/Smiirl/' (at the root domaine name, in a 'Smiirl' folder)
+- Just upload files where you want in your apache or nginx server. Exemple like here : 'http://your-domaine-name.com/Smiirl/' (at the root domaine name, in a 'Smiirl' folder)
 ```
 config/
 edit/
@@ -40,12 +40,9 @@ index.php
 number.json (or the file name you choose)
 .htaccess
 ```
-
-- Go to your Smiirl Account and specify your configuration to smiirl (If you follow the exemple bellow, specify http://your-domaine-name.com/Smiirl/ as URL)
-
+- Go to your [Smiirl Account](https://my.smiirl.com/login) and specify your configuration to smiirl (If you follow the exemple bellow, specify http://your-domaine-name.com/Smiirl/ as URL)
 - Protect the editing action with php or with .htpasswd (Ask Google)
-
 - Enjoy !
 
 ## Editing the number value of your Smiirl Counter
-- Go to 'http://your-domaine-name.com/Smiirl/edit' if you follow the exemple bellow.
+Go to 'http://your-domaine-name.com/Smiirl/edit' if you follow the exemple bellow.
