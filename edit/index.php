@@ -7,25 +7,12 @@ $FILE = new File();
 $LOG = new Log();
 
 $reel_value = $FILE->content();
-$LOG->erase();
+
 header('Content-type: text/html; charset=utf-8');
 
 if ($_POST) {
   if ( $_POST['PARAMS'] && $_POST[$FILE->key()] >= 0) {
-    switch ($_POST['PARAMS']) {
-      case 'plus':
-        $new_value = $reel_value[$FILE->key()] + $_POST[$FILE->key()];
-        break;
-      case 'minus':
-        $new_value = $reel_value[$FILE->key()] - $_POST[$FILE->key()];
-        break;
-      case 'erase':
-        $new_value = $_POST[$FILE->key()];
-        break;
-      case 'reset':
-        $new_value = "0";
-        break;
-    }
+    include_once '../config/actions.math.php';
     $FILE->writeNumber($new_value);
     $LOG->write($new_value);
   }

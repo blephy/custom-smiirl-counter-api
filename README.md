@@ -39,6 +39,28 @@ You can customise actions. See `$_ACTIONS` in [config/client.php](config/client.
 - Action `erase` : Erase the existing number by the input number value.
 - Action `reset` : Reset existing number to zero.
 
+**Add a new action :**
+- Add your action configuration to `$_ACTIONS` array :
+```
+'new_action_name' => [
+  'active' => true,
+  'radio_html' => 'HTML Output in front of the html's radio',
+  'input_html' => 'HTML Output in front of the html's input when the radio is selected',
+  'display_input' => true,
+  'submit_html' => 'HTML value of the submit button when the radio is selected'
+]
+```
+- Add your mathematical operation to [config/actions.math.php](config/actions.math.php) :
+```
+// This new action called new_action_name add the input value to counter and multiply it by 100
+// $reel_value[$FILE->key()] is the current value of the counter before the action is done
+// $_POST[$FILE->key()] is the value of the form's input
+// $new_value is the resulting value of the operation
+case 'new_action_name':
+  $new_value = ( $reel_value[$FILE->key()] + $_POST[$FILE->key()] ) * 100;
+  break;
+```
+
 ### API
 You can construct your home made solution. Documentation in progress ...
 
