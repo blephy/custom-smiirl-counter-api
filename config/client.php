@@ -46,28 +46,28 @@ $_HTML_COUNT = 'Valeur du compteur';
 //    'submit_html' => [STRING](HTML output of submit button)
 // First value is the default checked html radio
 $_ACTIONS = [
-  'plus' => [
+  'AJOUTER' => [
     'active' => true,
     'radio_html' => 'Chiffre d\'affaire HT : ',
     'input_html' => 'CA à ajouter : ',
     'display_input' => true,
     'submit_html' => 'Ajouter'
   ],
-  'minus' => [
+  'ENLEVER' => [
     'active' => true,
     'radio_html' => 'Annulation HT : ',
     'input_html' => 'CA à enlever : ',
     'display_input' => true,
     'submit_html' => 'Enlever'
   ],
-  'erase' => [
+  'ECRASER' => [
     'active' => true,
     'radio_html' => 'Ecraser : ',
     'input_html' => 'Changer la valeur en : ',
     'display_input' => true,
     'submit_html' => 'Redéfinir'
   ],
-  'reset' => [
+  'RESET' => [
     'active' => true,
     'radio_html' => 'Reset : ',
     'input_html' => 'Votre compteur sera remis à zero : ',

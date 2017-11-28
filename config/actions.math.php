@@ -1,15 +1,15 @@
 <?php
 switch ($_POST['PARAMS']) {
-  case 'plus':
+  case 'AJOUTER':
     $new_value = $reel_value[$FILE->key()] + $_POST[$FILE->key()];
     break;
-  case 'minus':
+  case 'ENLEVER':
     $new_value = $reel_value[$FILE->key()] - $_POST[$FILE->key()];
     break;
-  case 'erase':
+  case 'ECRASER':
     $new_value = $_POST[$FILE->key()];
     break;
-  case 'reset':
+  case 'RESET':
     $new_value = "0";
     break;
 }

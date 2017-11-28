@@ -31,7 +31,6 @@ if ($_POST) {
 
 <body>
   <form class="" action="" method="post">
-    <?php if ( $_ACTIVE_EASTER_EGGS ) { include '../template/easter-egg.php';} ?>
     <div class="wrapper">
       <label class="compteur" for="">
         <?php echo $_HTML_COUNT; ?><br>
@@ -62,8 +61,20 @@ if ($_POST) {
       <label id="html_input" for=""><?php echo reset($_ACTIONS)['input_html']; ?></label>
       <input id="input" type="number" name="<?php echo $FILE->key(); ?>" value="<?php echo $_DEFAULT_INPUT_VALUE; ?>" required>
       <input id="submit" type="submit" value="<?php echo reset($_ACTIONS)['submit_html']; ?>">
+      <?php
+      $last_5_log = $LOG->getLast(5);
+      echo '<span class="log" style="margin-top: 10px;"><strong>HISTORIQUE</strong></span>';
+      foreach ($last_5_log as $log) {
+        $number = $LOG->getLogInfo($log, 'NUMBER: ');
+        $date= $LOG->getLogInfo($log, 'DATE: ');
+        $action = $LOG->getLogInfo($log, 'ACTION: ');
+        $input = $LOG->getLogInfo($log, 'INPUT: ');
+        echo '<span class="log line">'.$date.' -><br>'.$action.' '.$input.' = '.$number.'</span>';
+      }
+      ?>
     </div>
   </form>
+  <?php if ( $_ACTIVE_EASTER_EGGS ) { include '../template/easter-egg.php';} ?>
   <script type="text/javascript" src="index.js"></script>
 </body>
 

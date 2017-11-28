@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:500');
-body {
-  overflow: hidden;
+body, html {
+  margin: 0;
+  padding: 0;
   font-size: 20px;
   font-family: "Raleway", sans-serif;
 }
@@ -8,9 +9,8 @@ form {
   width: 100vw;
   height: 100vh;
   box-sizing: border-box;
-  padding: 0 20px;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -103,6 +103,20 @@ label {
   text-decoration: none;
   color: black;
   letter-spacing: 2.5px;
+}
+.log {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  width: 280px;
+  line-height: 15px;
+  text-align: center;
+  font-family: monospace;
+}
+.line {
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 2.5px 0;
 }
 #iframe {
   margin-bottom: 20px;
