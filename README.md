@@ -40,7 +40,7 @@ $_ACTIVE_EASTER_EGGS // Active easter eggs after submitting new number value
 > Exemple :
 > Uploaded at 'http://your-domaine-name.com/Smiirl/'
 > so `$_ROOT_URL = 'http://your-domaine-name.com'`
-> and `$_PROJECT_FOLDER = '/Smiirl'``
+> and `$_PROJECT_FOLDER = '/Smiirl'`
 
 Files/Folders to upload :
 ```
