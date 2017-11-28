@@ -35,7 +35,14 @@ $_ACTIVE_EASTER_EGGS // Active easter eggs after submitting new number value
 ```
 
 ## Installation
-- Just upload files where you want in your apache or nginx server (in `$_PROJECT_FOLDER`). Exemple like here : 'http://your-domaine-name.com/Smiirl/' (in a 'Smiirl' folder, so your `$_PROJECT_FOLDER = '/Smiirl'` )
+- Just upload files in your apache or nginx server where you specify `$_PROJECT_FOLDER`.
+
+> Exemple :
+> Uploaded at 'http://your-domaine-name.com/Smiirl/'
+> so `$_ROOT_URL = 'http://your-domaine-name.com'`
+> and `$_PROJECT_FOLDER = '/Smiirl'``
+
+Files/Folders to upload :
 ```
 class/
 config/
@@ -43,10 +50,15 @@ edit/
 log/
 template/
 index.php
-number.json (or the file name you choose)
+number.json (replace by the name in $_PATH_JSON_FILE if you change it)
 .htaccess
 ```
-- Go to your [Smiirl Account](https://my.smiirl.com/login) and specify your configuration to smiirl (If you follow the exemple bellow, specify http://your-domaine-name.com/Smiirl/ as URL)
+
+- Go to your [Smiirl Account](https://my.smiirl.com/login) and specify your configuration.
+> Exemple :
+> If you follow the exemple bellow, specify http://your-domaine-name.com/Smiirl/ as URL
+> in your Smiirl Account
+
 - Protect the editing action with php or with .htpasswd (Ask Google)
 - Enjoy !
 
