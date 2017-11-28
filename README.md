@@ -23,6 +23,8 @@ Please, you maybe need to read the [official documentation of Smiirl](http://sta
 
 ## Configuration
 Edit the [config/client.php](config/client.php) file as you want
+**You can just edit $_ROOT_URL and $_PROJECT_FOLDER and you are good to go**
+
 ``` php
 $_ROOT_URL // your domaine name with protocol and extension
 $_PROJECT_FOLDER // absolute path of the folder which contain this project on your remote server
@@ -32,10 +34,8 @@ $_KEY_NAME // the name of the key relative to the number in your .json file
 $_ACTIVE_EASTER_EGGS // Active easter eggs after submitting new number value
 ```
 
-**You can just edit $_ROOT_URL and $_ROOT_FOLDER and you are basically good to go**
-
 ## Installation
-- Just upload files where you want in your apache or nginx server. Exemple like here : 'http://your-domaine-name.com/Smiirl/' (at the root domaine name, in a 'Smiirl' folder)
+- Just upload files where you want in your apache or nginx server (in `$_PROJECT_FOLDER`). Exemple like here : 'http://your-domaine-name.com/Smiirl/' (in a 'Smiirl' folder, so your `$_PROJECT_FOLDER = '/Smiirl'` )
 ```
 class/
 config/
