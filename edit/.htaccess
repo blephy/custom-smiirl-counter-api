@@ -1,3 +1,4 @@
 #AuthType Basic
-#AuthUserFile "/home/dbcrenovmz/www/smiirl/edit/.htpasswd"
+#AuthName "My Protected Area"
+#AuthUserFile /home/dbcrenovmz/www/smiirl/edit/.htpasswd
 #Require valid-user

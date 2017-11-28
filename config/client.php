@@ -1,5 +1,5 @@
 <?php
-// Your domaine name.
+// Your domaine name. Without protocol
 // Do not change this variable unless you know what you are doing
 $_ROOT_URL = $_SERVER['HTTP_HOST'];
 
@@ -34,7 +34,7 @@ $_ACTIVE_EASTER_EGGS = true;
 // [STRING]
 $_DEFAULT_INPUT_VALUE = '';
 
-// HTML Displayed on top of number's Counter
+// HTML Displayed on top of Counter's number
 $_HTML_COUNT = 'Valeur du compteur';
 
 // Possible actions implemented

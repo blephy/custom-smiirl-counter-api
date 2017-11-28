@@ -22,24 +22,33 @@ This repository is in operation at [dbcrenovation.fr](//dbcrenovation.fr/smiirl/
 Please, you maybe need to read the [official documentation of Smiirl](http://static.smiirl.com/wp-content/uploads/2017/05/guide-custom-sup.pdf).
 
 ## Configuration
+### Basic
 Edit the [config/client.php](config/client.php) file as you want
-**You can just edit `$_ROOT_URL` and `$_PROJECT_FOLDER` and you are good to go**
+**You can just edit `$_PROJECT_FOLDER` and you are good to go**
 
 ``` php
-$_ROOT_URL // your domaine name with protocol and extension
 $_PROJECT_FOLDER // absolute path of the folder which contain this project on your remote server
 $_PATH_JSON_FILE // the path to .json file relative to $_PROJECT_FOLDER
 $_PATH_LOG_FILE // the path to .log file relative to $_PROJECT_FOLDER
 $_KEY_NAME // the name of the key relative to the number in your .json file
 $_ACTIVE_EASTER_EGGS // Active easter eggs after submitting new number value
+$_DEFAULT_INPUT_VALUE // The default input value of the form
+$_HTML_COUNT // The output HTML in top of counter's number
+$_ACTIONS // You can here change or create custom actions
 ```
+
+### Customise actions
+You can customise actions. See `$_ACTIONS` in [config/client.php](config/client.php).
+
+### API
+You can construct your home made solution. Documentation in progress ...
 
 ## Installation
 - Just upload files in your apache or nginx server where you specify `$_PROJECT_FOLDER`.
 
 > Exemple :
 > Uploaded at 'http://your-domaine-name.com/Smiirl/'
-> so `$_ROOT_URL = 'http://your-domaine-name.com'`
+> so `$_ROOT_URL = 'http://your-domaine-name.com'` (optional)
 > and `$_PROJECT_FOLDER = '/Smiirl'`
 
 Files/Folders to upload :
