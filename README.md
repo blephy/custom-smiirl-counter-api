@@ -4,12 +4,6 @@ This repo let you **show custom number** in your custom smiirl counter, and add 
 
 **Edit actions are logged in** [edit.log](log/edit.log).
 
-**Possible Edit actions are :**
-- Add number from existing value
-- Remove number from existing value
-- Erase number with new value
-- Reset number to zero
-
 This repository is in operation at [dbcrenovation.fr](//dbcrenovation.fr/smiirl/)
 
 ![Screenshot edit smiirl counter interface](screenshot.png)
@@ -39,36 +33,31 @@ $_ACTIONS // You can here change or create custom actions
 
 ### Customise actions
 You can customise actions. See `$_ACTIONS` in [config/client.php](config/client.php).
+**Default actions are :**
+- Action `plus` : Add the input number value to the existing number.
+- Action `minus` : Remove the input number value to existing number
+- Action `erase` : Erase the existing number by the input number value.
+- Action `reset` : Reset existing number to zero.
 
 ### API
 You can construct your home made solution. Documentation in progress ...
 
 ## Installation
 - Just upload files in your apache or nginx server where you specify `$_PROJECT_FOLDER`.
-
-> Exemple :
-> Uploaded at 'http://your-domaine-name.com/Smiirl/'
-> so `$_ROOT_URL = 'http://your-domaine-name.com'` (optional)
-> and `$_PROJECT_FOLDER = '/Smiirl'`
-
-Files/Folders to upload :
 ```
-class/
-config/
-edit/
-log/
-template/
-index.php
-number.json (replace by the name in $_PATH_JSON_FILE if you change it)
-.htaccess
+Exemple :
+Uploaded at 'http://your-domaine-name.com/Smiirl/'
+so `$_PROJECT_FOLDER = '/Smiirl'`
 ```
 
 - Go to your [Smiirl Account](https://my.smiirl.com/login) and specify your configuration.
-> Exemple :
-> If you follow the exemple bellow, specify http://your-domaine-name.com/Smiirl/ as URL
-> in your Smiirl Account
+```
+Exemple :
+If you follow the exemple bellow, specify http://your-domaine-name.com/Smiirl/ as URL
+in your Smiirl Account
+```
 
-- Protect the editing action with php or with .htpasswd (Ask Google)
+- (Optional) Protect the editing action with php (restrictive IP or cookie) or with .htpasswd (Ask Google)
 - Enjoy !
 
 ## Editing the number value of your Smiirl Counter

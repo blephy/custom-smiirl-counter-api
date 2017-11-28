@@ -18,7 +18,11 @@ class Log {
     $new_line = " \r\n";
     $ip = "IP: ".$_SERVER['REMOTE_ADDR'];
     $log = $date."      ----->      ".$ip."      :      ".$number.$new_line;
-    error_log($log, 3, $this->_path_to_file);
+    return error_log($log, 3, $this->_path_to_file);
+  }
+
+  public function erase() {
+    return file_put_contents($this->_path_to_file, '');
   }
 }
 ?>

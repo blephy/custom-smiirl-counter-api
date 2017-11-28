@@ -7,7 +7,7 @@ $FILE = new File();
 $LOG = new Log();
 
 $reel_value = $FILE->content();
-
+$LOG->erase();
 header('Content-type: text/html; charset=utf-8');
 
 if ($_POST) {
