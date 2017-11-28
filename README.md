@@ -67,6 +67,9 @@ case 'new_action_name':
   break;
 ```
 
+### Customise User Interface
+Just learn CSS language and edit [edit/index.css](edit/index.css)
+
 ### API
 You can construct your home made solution. Documentation in progress ...
 
