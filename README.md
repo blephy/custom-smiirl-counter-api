@@ -23,7 +23,7 @@ Please, you maybe need to read the [official documentation of Smiirl](http://sta
 
 ## Configuration
 Edit the [config/client.php](config/client.php) file as you want
-**You can just edit $_ROOT_URL and $_PROJECT_FOLDER and you are good to go**
+**You can just edit `$_ROOT_URL` and `$_PROJECT_FOLDER` and you are good to go**
 
 ``` php
 $_ROOT_URL // your domaine name with protocol and extension
