@@ -49,10 +49,10 @@ You can customise actions. See `$_ACTIONS` in [config/client.php](config/client.
 ```
 'new_action_name' => [
   'active' => true,
-  'radio_html' => 'HTML Output in front of the html's radio',
-  'input_html' => 'HTML Output in front of the html's input when the radio is selected',
+  'radio_html' => 'Custom text',
+  'input_html' => 'Add value and multiply by 100',
   'display_input' => true,
-  'submit_html' => 'HTML value of the submit button when the radio is selected'
+  'submit_html' => 'Do it !'
 ]
 ```
 
