@@ -2,9 +2,9 @@
 Simple and fast integration of the perso / custom [Smiirl](http://www.smiirl.com/fr/) counter.
 This repo let you **show custom number** in your custom smiirl counter, and add **simple possibility to edit the number** with a basic user interface ([folder edit](edit/)).
 
-**Edit actions are logged in** [log-server.log](edit/log-server.log).
+**Edit actions are logged in** [edit.log](log/edit.log).
 
-**Edit actions are :**
+**Possible Edit actions are :**
 - Add number from existing value
 - Remove number from existing value
 - Erase number with new value
@@ -25,9 +25,9 @@ Please, you maybe need to read the [official documentation of Smiirl](http://sta
 Edit the [config/client.php](config/client.php) file as you want
 ``` php
 $_ROOT_URL // your domaine name with protocol and extension
-$_ROOT_FOLDER // folder which contain this project on your remote server
-$_PATH_JSON_FILE // the path to .json file relative to ROOT_FOLDER
-$_PATH_LOG_FILE // the path to .log file relative to ROOT_FOLDER
+$_PROJECT_FOLDER // absolute path of the folder which contain this project on your remote server
+$_PATH_JSON_FILE // the path to .json file relative to $_PROJECT_FOLDER
+$_PATH_LOG_FILE // the path to .log file relative to $_PROJECT_FOLDER
 $_KEY_NAME // the name of the key relative to the number in your .json file
 $_ACTIVE_EASTER_EGGS // Active easter eggs after submitting new number value
 ```

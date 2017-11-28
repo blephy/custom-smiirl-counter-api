@@ -47,7 +47,7 @@ if ($_POST) {
   <form class="" action="" method="post">
     <?php if ($_ACTIVE_EASTER_EGGS) { include '../template/easter-egg.php';} ?>
     <div class="wrapper">
-      <label class="compteur" for="">Valeur du compteur<br><a href="//dbcrenovation.fr/smiirl/" title="Voir le fichier Json réel"><?php echo $FILE->value(); ?></a></label>
+      <label class="compteur" for="">Valeur du compteur<br><a href="<?php echo $_ROOT_URL.$_PROJECT_FOLDER; ?>" title="Voir le fichier Json réel"><?php echo $FILE->value(); ?></a></label>
       <div class="group">Chiffre d'affaire HT : <input class="params" type="radio" name="PARAMS" value="plus" checked></div>
       <div class="group">Annulation HT : <input class="params" type="radio" name="PARAMS" value="minus"></div>
       <div class="group">Ecraser : <input class="params" type="radio" name="PARAMS" value="erase"></div>
