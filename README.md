@@ -24,19 +24,23 @@ Please, you maybe need to read the [official documentation of Smiirl](http://sta
 ## Configuration
 Edit the [config/client.php](config/client.php) file as you want
 ``` php
-$_NAME_JSON_FILE // the name of your .json file containing your number
-$_PATH_JSON_FILE // the relative or absolute path to the .json file
+$_ROOT_URL // your domaine name with protocol and extension
+$_ROOT_FOLDER // folder which contain this project on your remote server
+$_PATH_JSON_FILE // the path to .json file relative to ROOT_FOLDER
+$_PATH_LOG_FILE // the path to .log file relative to ROOT_FOLDER
 $_KEY_NAME // the name of the key relative to the number in your .json file
 $_ACTIVE_EASTER_EGGS // Active easter eggs after submitting new number value
 ```
 
-**If you decide to change KEY_NAME and NAME_JSON_FILE please create a .json file with your content.**
+**You can just edit $_ROOT_URL and $_ROOT_FOLDER and you are basically good to go**
 
 ## Installation
 - Just upload files where you want in your apache or nginx server. Exemple like here : 'http://your-domaine-name.com/Smiirl/' (at the root domaine name, in a 'Smiirl' folder)
 ```
+class/
 config/
 edit/
+log/
 template/
 index.php
 number.json (or the file name you choose)
