@@ -41,11 +41,11 @@ You can customise actions. See `$_ACTIONS` in [config/client.php](config/client.
 
 **Add a new action :**
 - Add your action configuration to `$_ACTIONS` array :
-`active`, active the action or not.
-`radio_html`, HTML Output in front of the html's radio.
-`input_html`, HTML Output in front of the html's input when the radio is selected.
-`display_input`, Display or not the form's input if the action is selected.
-`submit_html`, HTML value of the submit button when the radio is selected.
+  - `active`, active the action or not.
+  - `radio_html`, HTML Output in front of the html's radio.
+  - `input_html`, HTML Output in front of the html's input when the radio is selected.
+  - `display_input`, Display or not the form's input if the action is selected.
+  - `submit_html`, HTML value of the submit button when the radio is selected.
 ```
 'new_action_name' => [
   'active' => true,
@@ -57,9 +57,9 @@ You can customise actions. See `$_ACTIONS` in [config/client.php](config/client.
 ```
 
 - Add your mathematical operation to [config/actions.math.php](config/actions.math.php) :
-`$reel_value[$FILE->key()]`, is the current value of the counter before the action is done.
-`$_POST[$FILE->key()]`, is the value of the form's input.
-`$new_value`, is the resulting value of the operation.
+  - `$reel_value[$FILE->key()]`, is the current value of the counter before the action is done.
+  - `$_POST[$FILE->key()]`, is the value of the form's input.
+  - `$new_value`, is the resulting value of the operation.
 ```
 // This new action called new_action_name add the input value to counter and multiply it by 100
 case 'new_action_name':
