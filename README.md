@@ -17,22 +17,22 @@ Please, you maybe need to read the [official documentation of Smiirl](http://sta
 
 ## Configuration
 ### Basic
-Edit the [config/client.php](config/client.php) file as you want
+Edit the [config/client.php](config/client.php) file as you want.
+
 **You can just edit `$_PROJECT_FOLDER` and you are good to go**
 
-``` php
-$_PROJECT_FOLDER // absolute path of the folder which contain this project on your remote server
-$_PATH_JSON_FILE // the path to .json file relative to $_PROJECT_FOLDER
-$_PATH_LOG_FILE // the path to .log file relative to $_PROJECT_FOLDER
-$_KEY_NAME // the name of the key relative to the number in your .json file
-$_ACTIVE_EASTER_EGGS // Active easter eggs after submitting new number value
-$_DEFAULT_INPUT_VALUE // The default input value of the form
-$_HTML_COUNT // The output HTML in top of counter's number
-$_ACTIONS // You can here change or create custom actions
-```
+- `$_PROJECT_FOLDER` : absolute path of the folder which contain this project on your remote server
+- `$_PATH_JSON_FILE` : the path to .json file relative to `$_PROJECT_FOLDER`
+- `$_PATH_LOG_FILE` : the path to .log file relative to `$_PROJECT_FOLDER`
+- `$_KEY_NAME` : the name of the key relative to the number in your .json file
+- `$_ACTIVE_EASTER_EGGS` : Active easter eggs after submitting new number value
+- `$_DEFAULT_INPUT_VALUE` : The default input value of the form
+- `$_HTML_COUNT` : The output HTML in top of counter's number
+- `$_ACTIONS` : You can here change or create custom actions
 
 ### Customise actions
 You can customise actions. See `$_ACTIONS` in [config/client.php](config/client.php).
+
 **Default actions are :**
 - Action `plus` : Add the input number value to the existing number.
 - Action `minus` : Remove the input number value to existing number
