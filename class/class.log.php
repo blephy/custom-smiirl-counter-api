@@ -58,5 +58,17 @@ class Log {
         return $temp;
       }
   }
+
+  public function printLast($how_many, $title) {
+    $last_log = $this->getLast($how_many);
+    echo '<span class="log" style="margin-top: 10px;"><strong>'.$title.'</strong></span>';
+    foreach ($last_log as $log) {
+      $number = $this->getLogInfo($log, 'NUMBER: ');
+      $date= $this->getLogInfo($log, 'DATE: ');
+      $action = $this->getLogInfo($log, 'ACTION: ');
+      $input = $this->getLogInfo($log, 'INPUT: ');
+      echo '<span class="log line">'.$date.' -><br>'.$action.' '.$input.' = '.$number.'</span>';
+    }
+  }
 }
 ?>

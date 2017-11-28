@@ -2,9 +2,11 @@
 include_once '../config/client.php';
 include_once '../class/class.file.php';
 include_once '../class/class.log.php';
+include_once '../class/class.utils.php';
 
 $FILE = new File();
 $LOG = new Log();
+$UTILS = new Utils();
 
 $reel_value = $FILE->content();
 
@@ -39,38 +41,13 @@ if ($_POST) {
         </a>
       </label>
       <?php
-      $checked = 'checked';
-      foreach ( $_ACTIONS as $key => $value ) {
-        if ($value['active']) {
-          echo '<div class="group">'.$value['radio_html'].
-               '<input id="'.$key.'" class="params" type="radio" name="PARAMS" value="'.$key.
-               '"'.$checked.'></div>';
-          echo ('<script>
-                document.getElementById("'.$key.'").onclick = function() {
-                  changeHTML([
-                    "'.$value['input_html'].'",
-                    "'.$value['submit_html'].'",
-                    "'.$value['display_input'].'"
-                  ]);
-                }
-                 </script>');
-          $checked = '';
-        }
-      }
+      $UTILS->printHtmlRadios();
       ?>
       <label id="html_input" for=""><?php echo reset($_ACTIONS)['input_html']; ?></label>
       <input id="input" type="number" name="<?php echo $FILE->key(); ?>" value="<?php echo $_DEFAULT_INPUT_VALUE; ?>" required>
       <input id="submit" type="submit" value="<?php echo reset($_ACTIONS)['submit_html']; ?>">
       <?php
-      $last_5_log = $LOG->getLast(5);
-      echo '<span class="log" style="margin-top: 10px;"><strong>HISTORIQUE</strong></span>';
-      foreach ($last_5_log as $log) {
-        $number = $LOG->getLogInfo($log, 'NUMBER: ');
-        $date= $LOG->getLogInfo($log, 'DATE: ');
-        $action = $LOG->getLogInfo($log, 'ACTION: ');
-        $input = $LOG->getLogInfo($log, 'INPUT: ');
-        echo '<span class="log line">'.$date.' -><br>'.$action.' '.$input.' = '.$number.'</span>';
-      }
+      $LOG->printLast(5, 'HISTORIQUE');
       ?>
     </div>
   </form>
