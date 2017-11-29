@@ -2,14 +2,15 @@
 Simple and fast integration of the perso / custom [Smiirl](http://www.smiirl.com/fr/) counter.
 This repo let you **show custom number** in your custom smiirl counter, and add **simple possibility to edit the number** with a basic user interface ([folder edit](edit/)).
 
-- **Print out your custom number over JSON format for you Smiirl Counter**
-- **Custom number can be change thanks to a User Interface**
-- **User Interface can easily be configured with the API**
-- **Add new action and mathematical operation setup with ease**
-- **All editing actions are logged in [edit.log](log/edit.log).**
-- **Editing history can be printed**
+- **Print out your custom number** in _JSON format_ for you Smiirl Counter.
+- _Custom number_ **can be edit** thanks to a User Interface.
+- _User Interface_ **can easily be configured** with the API.
+- **Add new action and mathematical operation** setup with ease.
+- _Editing history_ **can be printed**.
+- All editing actions **are logged in [log/edit.log](log/edit.log)**.
 
-**Editing's history is printed without the need of database like MySQL.**
+---
+**No MySQL database are needed.**
 
 This repository is in operation at [dbcrenovation.fr](//dbcrenovation.fr/smiirl/)
 
@@ -60,7 +61,7 @@ You can customise actions. See `$_ACTIONS` in [config/client.php](config/client.
   'radio_html' => 'Custom text',
   'input_html' => 'Add value and multiply by 100',
   'display_input' => true,
-  'submit_html' => 'Do it !'
+  'submit_html' => 'Do it !',
   'mathematic' => function ($old, $new) {
     return ($old + $new) * 100;
   }
