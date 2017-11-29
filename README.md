@@ -78,12 +78,12 @@ You can construct your home made solution. Documentation in progress ...
 ## Installation
 - Just upload files in your apache or nginx server where you specify `$_PROJECT_FOLDER`.
 > Exemple :
-> If you uploaded the project to 'http://your-domaine-name.com/Smiirl/'
-> your `$_PROJECT_FOLDER` need to be : `$_PROJECT_FOLDER = '/Smiirl'``
+> If you uploaded the project to _http://your-domaine-name.com/Smiirl/_
+> your `$_PROJECT_FOLDER` need to be : `$_PROJECT_FOLDER = '/Smiirl'`
 
 - Go to your [Smiirl Account](https://my.smiirl.com/login) and specify your configuration.
 > Exemple :
-> If you follow the exemple bellow, specify http://your-domaine-name.com/Smiirl/ as URL in your Smiirl Account
+> If you follow the exemple bellow, specify _http://your-domaine-name.com/Smiirl/_ as URL in your Smiirl Account
 
 - (Optional) Protect the editing action with php (restrictive IP / cookie / account session ...) or with .htpasswd (Ask Google)
 - Enjoy !
