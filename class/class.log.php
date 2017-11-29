@@ -67,7 +67,9 @@ class Log {
       $date= $this->getLogInfo($log, 'DATE: ');
       $action = $this->getLogInfo($log, 'ACTION: ');
       $input = $this->getLogInfo($log, 'INPUT: ');
-      echo '<span class="log line">'.$date.' -><br>'.$action.' '.$input.' = '.$number.'</span>';
+      if ($number != null && $date != null && $action != null && $input != null) {
+          echo '<span class="log line">'.$date.' -><br>'.$action.' '.$input.' = '.$number.'</span>';
+      }
     }
   }
 }
