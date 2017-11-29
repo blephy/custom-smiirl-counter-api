@@ -49,7 +49,7 @@ You can customise actions. See `$_ACTIONS` in [config/client.php](config/client.
 
 - **Add a new action :**
 
-...Add your action configuration to `$_ACTIONS` array :
+⋅⋅⋅Add your action configuration to `$_ACTIONS` array :
   - `active` : active the action or not.
   - `radio_html` : HTML Output in front of the html's radio.
   - `input_html` : HTML Output in front of the html's input when the radio is selected.
