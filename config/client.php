@@ -51,28 +51,40 @@ $_ACTIONS = [
     'radio_html' => 'Chiffre d\'affaire HT : ',
     'input_html' => 'CA à ajouter : ',
     'display_input' => true,
-    'submit_html' => 'Ajouter'
+    'submit_html' => 'Ajouter',
+    'mathematic' => function ($old, $new) {
+      return $old + $new;
+    }
   ],
   'ENLEVER' => [
     'active' => true,
     'radio_html' => 'Annulation HT : ',
     'input_html' => 'CA à enlever : ',
     'display_input' => true,
-    'submit_html' => 'Enlever'
+    'submit_html' => 'Enlever',
+    'mathematic' => function ($old, $new) {
+      return $old - $new;
+    }
   ],
   'ECRASER' => [
     'active' => true,
     'radio_html' => 'Ecraser : ',
     'input_html' => 'Changer la valeur en : ',
     'display_input' => true,
-    'submit_html' => 'Redéfinir'
+    'submit_html' => 'Redéfinir',
+    'mathematic' => function ($old, $new) {
+      return $new;
+    }
   ],
   'RESET' => [
     'active' => true,
     'radio_html' => 'Reset : ',
     'input_html' => 'Votre compteur sera remis à zero : ',
     'display_input' => false,
-    'submit_html' => 'Reset'
+    'submit_html' => 'Reset',
+    'mathematic' => function ($old, $new) {
+      return 0;
+    }
   ]
 ];
 

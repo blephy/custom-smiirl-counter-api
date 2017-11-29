@@ -18,9 +18,12 @@ class Utils {
 
     if ($_POST) {
       if ( $_POST['PARAMS'] && $_POST[$this->file->key()] >= 0) {
-        include_once '../config/actions.math.php';
-        $this->file->writeNumber($new_value);
-        $this->log->write($new_value);
+        if ( in_array($_POST['PARAMS'], array_keys($this->actions)) ) {
+          $math = $this->actions[$_POST['PARAMS']]['mathematic'];
+          $result = $math($reel_value[$this->file->key()], $_POST[$this->file->key()]);
+          $this->file->writeNumber($result);
+          $this->log->write($result);
+        }
       }
     }
   }
