@@ -87,5 +87,7 @@ You can construct your home made solution. Documentation in progress ...
 - (Optional) Protect the editing action with php (restrictive IP / cookie / account session ...) or with .htpasswd (Ask Google)
 - Enjoy !
 
-## Editing the number value of your Smiirl Counter
-Go to 'http://your-domaine-name.com/Smiirl/edit' if you follow the exemple bellow.
+## How to go to the user interface to edit the number value of your Smiirl Counter
+To access the edit user interface, add `/edit` to your smiirl URL :
+> Exemple :
+> If you follow the installation exemple, Go to _http://your-domaine-name.com/Smiirl/edit_
