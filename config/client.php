@@ -35,6 +35,7 @@ $_ACTIVE_EASTER_EGGS = true;
 $_DEFAULT_INPUT_VALUE = '';
 
 // HTML Displayed on top of Counter's number
+// [STRING]
 $_HTML_COUNT = 'Valeur du compteur';
 
 // Possible actions implemented
@@ -43,8 +44,12 @@ $_HTML_COUNT = 'Valeur du compteur';
 //    'active' => [BOOL](active or not this action),
 //    'radio_html' => [STRING](HTML output of radios form),
 //    'input_html' => [STRING](HTML output of input form),
-//    'submit_html' => [STRING](HTML output of submit button)
-// First value is the default checked html radio
+//    'display_input' => [BOOL](Display or not input form if action selected),
+//    'submit_html' => [STRING](HTML output of submit button),
+//    'mathematic' => [FUNCTION](A mathematical operation with always 2 parameters
+//                    First parameter is the current counter's value.
+//                    Second parameter is the input form value submitted.
+// First action in the array is the default checked html radio
 $_ACTIONS = [
   'AJOUTER' => [
     'active' => true,
