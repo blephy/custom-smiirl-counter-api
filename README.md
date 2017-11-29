@@ -5,6 +5,7 @@ This repo let you **show custom number** in your custom smiirl counter, and add 
 - **Print out your custom number over JSON format for you Smiirl Counter**
 - **Custom number can be change thanks to a User Interface**
 - **User Interface can easily be configured with the API**
+- **Add new action and mathematical operation setup with ease**
 - **All editing actions are logged in [edit.log](log/edit.log).**
 - **Editing history can be printed**
 
@@ -40,10 +41,10 @@ Edit the [config/client.php](config/client.php) file as you want.
 You can customise actions. See `$_ACTIONS` in [config/client.php](config/client.php).
 
 **Default actions are :**
-- Action `plus` : Add the input number value to the existing number.
-- Action `minus` : Remove the input number value to existing number
-- Action `erase` : Erase the existing number by the input number value.
-- Action `reset` : Reset existing number to zero.
+- Action `AJOUTER` : Add the input number value to the existing number.
+- Action `ENLEVER` : Remove the input number value to existing number
+- Action `ECRASER` : Erase the existing number by the input number value.
+- Action `RESET` : Reset existing number to zero.
 
 **Add a new action :**
 - Add your action configuration to `$_ACTIONS` array :
@@ -52,25 +53,18 @@ You can customise actions. See `$_ACTIONS` in [config/client.php](config/client.
   - `input_html`, HTML Output in front of the html's input when the radio is selected.
   - `display_input`, Display or not the form's input if the action is selected.
   - `submit_html`, HTML value of the submit button when the radio is selected.
+  - `mathematic`, An operation function with 2 parameters (old value counter and new input value)
 ```
-'new_action_name' => [
+'MY_NEW_ACTION' => [
   'active' => true,
   'radio_html' => 'Custom text',
   'input_html' => 'Add value and multiply by 100',
   'display_input' => true,
   'submit_html' => 'Do it !'
+  'mathematic' => function ($old, $new) {
+    return ($old + $new) * 100;
+  }
 ]
-```
-
-- Add your mathematical operation to [config/actions.math.php](config/actions.math.php) :
-  - `$reel_value[$FILE->key()]`, is the current value of the counter before the action is done.
-  - `$_POST[$FILE->key()]`, is the value of the form's input.
-  - `$new_value`, is the resulting value of the operation.
-```
-// This new action called new_action_name add the input value to counter and multiply it by 100
-case 'new_action_name':
-  $new_value = ( $reel_value[$FILE->key()] + $_POST[$FILE->key()] ) * 100;
-  break;
 ```
 
 ### Customise User Interface
