@@ -42,19 +42,19 @@ You can customise actions. See `$_ACTIONS` in [config/client.php](config/client.
 
 **Default actions are :**
 - Action `AJOUTER` : Add the input number value to the existing number.
-- Action `ENLEVER` : Remove the input number value to existing number
+- Action `ENLEVER` : Remove the input number value to the existing number
 - Action `ECRASER` : Erase the existing number by the input number value.
 - Action `RESET` : Reset existing number to zero.
 
 **Add a new action :**
 - Add your action configuration to `$_ACTIONS` array :
-  - `active`, active the action or not.
-  - `radio_html`, HTML Output in front of the html's radio.
-  - `input_html`, HTML Output in front of the html's input when the radio is selected.
-  - `display_input`, Display or not the form's input if the action is selected.
-  - `submit_html`, HTML value of the submit button when the radio is selected.
-  - `mathematic`, An operation function with 2 parameters (old value counter and new input value)
-```
+  - `active` : active the action or not.
+  - `radio_html` : HTML Output in front of the html's radio.
+  - `input_html` : HTML Output in front of the html's input when the radio is selected.
+  - `display_input` : Display or not the form's input if the action is selected.
+  - `submit_html` : HTML value of the submit button when the radio is selected.
+  - `mathematic` : An operation function with 2 parameters (old value counter and new input value)
+```php
 'MY_NEW_ACTION' => [
   'active' => true,
   'radio_html' => 'Custom text',
