@@ -1,13 +1,13 @@
 <?php
 switch ($_POST['PARAMS']) {
   case 'AJOUTER':
-    $new_value = $reel_value[$FILE->key()] + $_POST[$FILE->key()];
+    $new_value = $reel_value[$this->file->key()] + $_POST[$this->file->key()];
     break;
   case 'ENLEVER':
-    $new_value = $reel_value[$FILE->key()] - $_POST[$FILE->key()];
+    $new_value = $reel_value[$this->file->key()] - $_POST[$this->file->key()];
     break;
   case 'ECRASER':
-    $new_value = $_POST[$FILE->key()];
+    $new_value = $_POST[$this->file->key()];
     break;
   case 'RESET':
     $new_value = "0";

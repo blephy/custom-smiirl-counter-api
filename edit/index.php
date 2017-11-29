@@ -8,17 +8,7 @@ $FILE = new File();
 $LOG = new Log();
 $UTILS = new Utils();
 
-$reel_value = $FILE->content();
-
-header('Content-type: text/html; charset=utf-8');
-
-if ($_POST) {
-  if ( $_POST['PARAMS'] && $_POST[$FILE->key()] >= 0) {
-    include_once '../config/actions.math.php';
-    $FILE->writeNumber($new_value);
-    $LOG->write($new_value);
-  }
-}
+$UTILS->listenRequest();
 ?>
 <!DOCTYPE html>
 <html>

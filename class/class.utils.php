@@ -2,11 +2,27 @@
 class Utils {
 
   public $actions;
+  public $file;
+  public $log;
 
   public function __construct() {
-    global $_ACTIONS;
+    global $_ACTIONS, $FILE, $LOG;
 
     $this->actions = $_ACTIONS;
+    $this->file = $FILE;
+    $this->log = $LOG;
+  }
+
+  public function listenRequest() {
+    $reel_value = $this->file->content();
+
+    if ($_POST) {
+      if ( $_POST['PARAMS'] && $_POST[$this->file->key()] >= 0) {
+        include_once '../config/actions.math.php';
+        $this->file->writeNumber($new_value);
+        $this->log->write($new_value);
+      }
+    }
   }
 
   public function printHtmlRadios($actions = null) {
