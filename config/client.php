@@ -7,7 +7,7 @@ $_ROOT_URL = $_SERVER['HTTP_HOST'];
 // Exemple : '/simple-smiirl-counter' if you upload
 // the app under https://your-domaine.fr/simple-smiirl-counter
 // [STRING]
-$_PROJECT_FOLDER = '/simple-smiirl-counter';
+$_PROJECT_FOLDER = '/test';
 
 // Do not change this variable unless you know what you are doing
 $_ROOT_FOLDER = $_SERVER['DOCUMENT_ROOT'].$_PROJECT_FOLDER;
@@ -41,7 +41,7 @@ $_HTML_COUNT = 'Valeur du compteur';
 // Possible actions implemented
 // [ARRAY]
 // [STRING](action name) => [
-//    'active' => [BOOL](active or not this action),
+//    ACTIVE => [BOOL](active or not this action),
 //    'radio_html' => [STRING](HTML output of radios form),
 //    'input_html' => [STRING](HTML output of input form),
 //    'display_input' => [BOOL](Display or not input form if action selected),
@@ -52,7 +52,7 @@ $_HTML_COUNT = 'Valeur du compteur';
 // First action in the array is the default checked html radio
 $_ACTIONS = [
   'AJOUTER' => [
-    'active' => true,
+    ACTIVE => true,
     'radio_html' => 'Chiffre d\'affaire HT : ',
     'input_html' => 'CA à ajouter : ',
     'display_input' => true,
@@ -62,7 +62,7 @@ $_ACTIONS = [
     }
   ],
   'ENLEVER' => [
-    'active' => true,
+    ACTIVE => true,
     'radio_html' => 'Annulation HT : ',
     'input_html' => 'CA à enlever : ',
     'display_input' => true,
@@ -72,7 +72,7 @@ $_ACTIONS = [
     }
   ],
   'ECRASER' => [
-    'active' => true,
+    ACTIVE => true,
     'radio_html' => 'Ecraser : ',
     'input_html' => 'Changer la valeur en : ',
     'display_input' => true,
@@ -82,7 +82,7 @@ $_ACTIONS = [
     }
   ],
   'RESET' => [
-    'active' => true,
+    ACTIVE => true,
     'radio_html' => 'Reset : ',
     'input_html' => 'Votre compteur sera remis à zero : ',
     'display_input' => false,

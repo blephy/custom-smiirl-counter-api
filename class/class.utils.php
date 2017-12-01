@@ -32,7 +32,7 @@ class Utils {
     $actions ? $temp_actions = $actions : $temp_actions = $this->actions;
     $checked = 'checked';
     foreach ( $temp_actions as $key => $value ) {
-      if ($value['active']) {
+      if ($value[ACTIVE]) {
         echo '<div class="group">'.$value['radio_html'].
              '<input id="'.$key.
              '" class="params" type="radio" name="PARAMS" value="'.$key.

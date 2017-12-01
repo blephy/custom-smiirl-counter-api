@@ -57,7 +57,7 @@ You can customise actions. See `$_ACTIONS` in [config/client.php](config/client.
   - `mathematic` : An operation function with 2 parameters (old value counter and new input value)
 ```php
 'MY_NEW_ACTION' => [
-  'active' => true,
+  ACTIVE => true,
   'radio_html' => 'Custom text',
   'input_html' => 'Add value and multiply by 100',
   'display_input' => true,

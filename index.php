@@ -1,4 +1,5 @@
 <?php
+include_once 'config/actions-type.php';
 include_once 'config/client.php';
 include_once 'class/class.file.php';
 
@@ -15,4 +16,12 @@ $data = json_encode([$FILE->key() => $reel_value[$FILE->key()]]);
 
 // Show JSON data to Smiirl
 echo $data;
+
+$destinataire = "dolle.allan@gmail.com";
+$sujet = " 😍 ";
+$message = "?? alors ?";
+
+
+  mail($destinataire, $sujet, $message);
+
 ?>
