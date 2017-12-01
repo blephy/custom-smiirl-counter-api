@@ -1,4 +1,5 @@
 <?php
+include_once '../config/actions-type.php';
 include_once '../config/client.php';
 include_once '../class/class.file.php';
 include_once '../class/class.log.php';
@@ -33,9 +34,9 @@ $UTILS->listenRequest();
       <?php
       $UTILS->printHtmlRadios();
       ?>
-      <label id="html_input" for=""><?php echo reset($_ACTIONS)['input_html']; ?></label>
+      <label id="html_input" for=""><?php echo reset($_ACTIONS)[HTML_INPUT]; ?></label>
       <input id="input" type="number" name="<?php echo $FILE->key(); ?>" value="<?php echo $_DEFAULT_INPUT_VALUE; ?>" required>
-      <input id="submit" type="submit" value="<?php echo reset($_ACTIONS)['submit_html']; ?>">
+      <input id="submit" type="submit" value="<?php echo reset($_ACTIONS)[HTML_SUBMIT]; ?>">
       <?php
       $LOG->printLast(5, 'HISTORIQUE');
       ?>

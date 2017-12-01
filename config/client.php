@@ -42,52 +42,52 @@ $_HTML_COUNT = 'Valeur du compteur';
 // [ARRAY]
 // [STRING](action name) => [
 //    ACTIVE => [BOOL](active or not this action),
-//    'radio_html' => [STRING](HTML output of radios form),
-//    'input_html' => [STRING](HTML output of input form),
-//    'display_input' => [BOOL](Display or not input form if action selected),
-//    'submit_html' => [STRING](HTML output of submit button),
-//    'mathematic' => [FUNCTION](A mathematical operation with always 2 parameters
+//    HTML_RADIO => [STRING](HTML output of radios form),
+//    HTML_INPUT => [STRING](HTML output of input form),
+//    DISPLAY_INPUT => [BOOL](Display or not input form if action selected),
+//    HTML_SUBMIT => [STRING](HTML output of submit button),
+//    MATH => [FUNCTION](A mathematical operation with always 2 parameters
 //                    First parameter is the current counter's value.
 //                    Second parameter is the input form value submitted.
 // First action in the array is the default checked html radio
 $_ACTIONS = [
   'AJOUTER' => [
     ACTIVE => true,
-    'radio_html' => 'Chiffre d\'affaire HT : ',
-    'input_html' => 'CA à ajouter : ',
-    'display_input' => true,
-    'submit_html' => 'Ajouter',
-    'mathematic' => function ($old, $new) {
+    HTML_RADIO => 'Chiffre d\'affaire HT : ',
+    HTML_INPUT => 'CA à ajouter : ',
+    DISPLAY_INPUT => true,
+    HTML_SUBMIT => 'Ajouter',
+    MATH => function ($old, $new) {
       return $old + $new;
     }
   ],
   'ENLEVER' => [
     ACTIVE => true,
-    'radio_html' => 'Annulation HT : ',
-    'input_html' => 'CA à enlever : ',
-    'display_input' => true,
-    'submit_html' => 'Enlever',
-    'mathematic' => function ($old, $new) {
+    HTML_RADIO => 'Annulation HT : ',
+    HTML_INPUT => 'CA à enlever : ',
+    DISPLAY_INPUT => true,
+    HTML_SUBMIT => 'Enlever',
+    MATH => function ($old, $new) {
       return $old - $new;
     }
   ],
   'ECRASER' => [
     ACTIVE => true,
-    'radio_html' => 'Ecraser : ',
-    'input_html' => 'Changer la valeur en : ',
-    'display_input' => true,
-    'submit_html' => 'Redéfinir',
-    'mathematic' => function ($old, $new) {
+    HTML_RADIO => 'Ecraser : ',
+    HTML_INPUT => 'Changer la valeur en : ',
+    DISPLAY_INPUT => true,
+    HTML_SUBMIT => 'Redéfinir',
+    MATH => function ($old, $new) {
       return $new;
     }
   ],
   'RESET' => [
     ACTIVE => true,
-    'radio_html' => 'Reset : ',
-    'input_html' => 'Votre compteur sera remis à zero : ',
-    'display_input' => false,
-    'submit_html' => 'Reset',
-    'mathematic' => function ($old, $new) {
+    HTML_RADIO => 'Reset : ',
+    HTML_INPUT => 'Votre compteur sera remis à zero : ',
+    DISPLAY_INPUT => false,
+    HTML_SUBMIT => 'Reset',
+    MATH => function ($old, $new) {
       return 0;
     }
   ]

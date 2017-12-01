@@ -49,20 +49,20 @@ You can customise actions. See `$_ACTIONS` in [config/client.php](config/client.
 
 - **Add a new action :**
   Add your action configuration to `$_ACTIONS` array :
-  - `active` : active the action or not.
-  - `radio_html` : HTML Output in front of the html's radio.
-  - `input_html` : HTML Output in front of the html's input when the radio is selected.
-  - `display_input` : Display or not the form's input if the action is selected.
-  - `submit_html` : HTML value of the submit button when the radio is selected.
-  - `mathematic` : An operation function with 2 parameters (old value counter and new input value)
+  - `ACTIVE` : active the action or not.
+  - `HTML_RADIO` : HTML Output in front of the html's radio.
+  - `HTML_INPUT` : HTML Output in front of the html's input when the radio is selected.
+  - `DISPLAY_INPUT` : Display or not the form's input if the action is selected.
+  - `HTML_SUBMIT` : HTML value of the submit button when the radio is selected.
+  - `MATH` : An operation function with 2 parameters (old value counter and new input value)
 ```php
 'MY_NEW_ACTION' => [
   ACTIVE => true,
-  'radio_html' => 'Custom text',
-  'input_html' => 'Add value and multiply by 100',
-  'display_input' => true,
-  'submit_html' => 'Do it !',
-  'mathematic' => function ($old, $new) {
+  HTML_RADIO => 'Custom text',
+  HTML_INPUT => 'Add value and multiply by 100',
+  DISPLAY_INPUT => true,
+  HTML_SUBMIT => 'Do it !',
+  MATH => function ($old, $new) {
     return ($old + $new) * 100;
   }
 ]

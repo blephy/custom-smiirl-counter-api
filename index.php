@@ -16,12 +16,4 @@ $data = json_encode([$FILE->key() => $reel_value[$FILE->key()]]);
 
 // Show JSON data to Smiirl
 echo $data;
-
-$destinataire = "dolle.allan@gmail.com";
-$sujet = " 😍 ";
-$message = "?? alors ?";
-
-
-  mail($destinataire, $sujet, $message);
-
 ?>
