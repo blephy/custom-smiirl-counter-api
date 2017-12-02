@@ -7,7 +7,7 @@ This repo let you **show custom number** in your custom smiirl counter, and add 
 - _User Interface_ **can easily be configured** with the API.
 - **Add new action and mathematical operation** setup with ease.
 - _Editing history_ **can be printed**.
-- All editing actions **are logged in [log/edit.log](log/edit.log)**.
+- All editing actions **are logged in [log/actions.log](log/actions.log)**.
 - **No MySQL database** needed.
 
 ## Demo
