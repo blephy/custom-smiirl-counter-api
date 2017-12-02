@@ -14,12 +14,11 @@ This repo let you **show custom number** in your custom smiirl counter, and add 
 <p align="center">
 <img src="https://github.com/blephy/simple-smiirl-counter/raw/master/screenshot.png" />
 <br>
-<a href="//allandolle.fr/simple-smiirl-counter" title="Demo Custom Smiirl Counter API">Demo API</a>
+<br>
+<a style= href="//allandolle.fr/simple-smiirl-counter" title="Demo Custom Smiirl Counter API">Demo API</a>
 <br>
 <a href="//allandolle.fr/simple-smiirl-counter/edit" title="Demo user interface to edit custom smiirl number">Demo User Interface</a>
 </p>
-
-[allandolle.fr/simple-smiirl-counter](//allandolle.fr/simple-smiirl-counter/)
 
 ## Requirements
 - [Nginx](https://nginx.org/en/) or [Apache](https://httpd.apache.org/)
