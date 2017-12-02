@@ -2,16 +2,20 @@
 Simple and fast integration of the perso / custom [Smiirl](http://www.smiirl.com/en/) counter.
 This repo let you **show custom number** in your [custom smiirl counter](http://www.smiirl.com/en/counter/custom), and add **simple possibility to edit the number** with a basic user interface ([folder edit](edit/)).
 
+
 <p align="center">
 <img src="http://cdn.smiirl.com/img/counter/custom/slideshow/5D-top-md@2.jpg" alt="Custom 7 number Smiirl Counter" width="80%" height="auto" />
 </p>
 
+
 ---
 ## Features
 - **Print out your custom number** in _JSON format_ for you Smiirl Counter.
-- _Custom number_ **can be edit** thanks to a User Interface.
-- _User Interface_ **can easily be configured** with the API.
-- **Add new action and mathematical operation** setup with ease.
+- _Custom number_ **can be edited** thanks to a User Interface.
+- **Included** _1 responsive template_.
+- **Included** _6 default actions_.
+- _User Interface_ **can easily be configured** with the API in order to write your template with ease.
+- **Add your custom action and mathematical operation** setup with ease.
 - _Editing history_ **can be printed**.
 - All editing actions **are logged in [log/actions.log](log/actions.log)**.
 - **No MySQL database** needed.
