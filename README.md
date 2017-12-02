@@ -78,8 +78,8 @@ You can customise actions. See `$_ACTIONS` in [config/client.php](config/client.
 Just learn CSS language and edit [edit/index.css](edit/index.css)
 
 ### API
-You can construct your home made solution. You need to add this php code on top of your
-.php file ():
+You can construct your home made solution. **You need to add this php code on every top** of your
+.php files (don't forget to edit the include directive with the right path):
 ```php
 // Exemple of include
 // Edit this include path with your directive directory
@@ -92,12 +92,11 @@ $SSmiirl = new SSmiirl;
 
 | API | PARAMS | RETURN | DESCRIPTION |
 | :---: | :---: | :---: | :--- |
-| `initSmiirlApiPage()` | none | JSON | Init functions and class needed to your api custom page. Return the json data after reading the .json file |
-
+| `initSmiirlApiPage()` | none | JSON | Init functions and class needed to your api custom page. Return the json data after reading the .json file
 ```php
 // Exemple
 echo $SSmiirl->initSmiirlApiPage();
-```
+``` |
 
 | API | PARAMS | RETURN | DESCRIPTION |
 | :---: | :---: | :---: | :--- |
