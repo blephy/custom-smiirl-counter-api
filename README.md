@@ -93,6 +93,7 @@ $SSmiirl = new SSmiirl;
 | API | PARAMS | RETURN | DESCRIPTION |
 | :---: | :---: | :---: | :--- |
 | `initSmiirlApiPage()` | none | JSON | Return the json data after reading the .json file |
+| :---: |
 | `echo $SSmiirl->initSmiirlApiPage();` |
 
 ## Installation
