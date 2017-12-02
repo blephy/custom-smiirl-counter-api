@@ -24,7 +24,7 @@ class Log {
            INTERFIX.ACTION_LOG.SUFFIX.$action.
            INTERFIX.INPUT_LOG.SUFFIX.$input.
            $new_line;
-    return error_log($log, 3, $this->_app->getLogFilePath());
+    return file_put_contents($this->_app->getLogFilePath(), $this->_content.$log, FILE_APPEND | LOCK_EX);
   }
 
   public function erase() {

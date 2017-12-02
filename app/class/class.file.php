@@ -22,7 +22,7 @@ class File {
   }
 
   public function writeJsonData($json_data) {
-    return file_put_contents($this->_app->getJsonFilePath(), $json_data);
+    return file_put_contents($this->_app->getJsonFilePath(), $json_data, LOCK_EX);
   }
 
   public function writeNumber($number) {

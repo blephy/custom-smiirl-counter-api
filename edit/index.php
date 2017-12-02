@@ -34,7 +34,7 @@ $SSmiirl->initEditPage();
       <input id="input" type="number" name="<?php echo $SSmiirl->getJsonKey(); ?>" value="<?php echo $SSmiirl->getDefaultInputValue(); ?>" required>
       <input id="submit" type="submit" value="<?php echo reset($_ACTIONS)[HTML_SUBMIT]; ?>">
       <?php
-      $SSmiirl->printLastLog(5);
+      $SSmiirl->printLastLog();
       ?>
     </div>
   </form>

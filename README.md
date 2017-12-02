@@ -80,6 +80,8 @@ You can construct your home made solution. Documentation in progress ...
 > If you uploaded the project to _http://your-domaine-name.com/Smiirl/_
 > your `$_PROJECT_FOLDER` need to be : `$_PROJECT_FOLDER = '/Smiirl'`
 
+- Don't forget to edit file permission of `app/log/actions.log` and `app/json/number.json` to 775 `chmod 755 $file` on your server in order to write in those files.
+
 - Go to your [Smiirl Account](https://my.smiirl.com/login) and specify your configuration.
 > Exemple :
 > If you follow the exemple bellow, specify _http://your-domaine-name.com/Smiirl/_ as URL in your Smiirl Account
