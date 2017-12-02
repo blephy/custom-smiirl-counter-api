@@ -2,6 +2,12 @@
 Simple and fast integration of the perso / custom [Smiirl](http://www.smiirl.com/en/) counter.
 This repo let you **show custom number** in your [custom smiirl counter](http://www.smiirl.com/en/counter/custom), and add **simple possibility to edit the number** with a basic user interface ([folder edit](edit/)).
 
+<p align="center">
+<img src="http://cdn.smiirl.com/img/counter/custom/slideshow/5D-top-md@2.jpg" alt="Custom 7 number Smiirl Counter" width="80%" height="auto" />
+</p>
+
+---
+## Features
 - **Print out your custom number** in _JSON format_ for you Smiirl Counter.
 - _Custom number_ **can be edit** thanks to a User Interface.
 - _User Interface_ **can easily be configured** with the API.
@@ -12,7 +18,7 @@ This repo let you **show custom number** in your [custom smiirl counter](http://
 
 ## Demo
 <p align="center">
-<img src="https://github.com/blephy/simple-smiirl-counter/raw/master/screenshot.png" />
+<img src="https://github.com/blephy/simple-smiirl-counter/raw/master/screenshot.png" alt="User Interface of this project"/>
 <br>
 <br>
 <a href="//allandolle.fr/simple-smiirl-counter" title="Demo Custom Smiirl Counter API">Demo API</a>
