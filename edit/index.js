@@ -1,20 +1,29 @@
 var radios = document.getElementsByClassName('params');
-var html_input = document.getElementById('html_input');
 var input = document.getElementById('input');
 var submit = document.getElementById('submit');
 
-input.focus();
+// input.focus();
+input.onfocus = function() {
+  var placeholder = input.getAttribute("placeholder");
+  input.setAttribute("placeholder", '');
+  input.addEventListener("focusout", writePlaceHolder(placeholder));
+};
+
+function writePlaceHolder(placeholder) {
+  console.log(placeholder);
+  input.setAttribute("placeholder", placeholder);
+}
 
 function changeHTML(array) {
-  html_input.innerHTML = array[0];
+  input.setAttribute("placeholder", array[0]);
   submit.value = array[1];
   if (array[2]) {
     input.style.display = 'block';
-    input.focus();
+    // input.focus();
     input.value == 0 ? input.value = '' : null;
   } else {
     input.style.display = 'none';
-    submit.focus();
+    // submit.focus();
     input.value = 0;
   }
 }

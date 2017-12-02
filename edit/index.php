@@ -30,8 +30,8 @@ $SSmiirl->initEditPage();
       <?php
       $SSmiirl->printActionsRadios();
       ?>
-      <label id="html_input" for=""><?php echo $SSmiirl->getFirstAction()[HTML_INPUT]; ?></label>
-      <input id="input" type="number" name="<?php echo $SSmiirl->getJsonKey(); ?>" value="<?php echo $SSmiirl->getDefaultInputValue(); ?>" required>
+      <input id="input" type="number" name="<?php echo $SSmiirl->getJsonKey(); ?>" value="<?php echo $SSmiirl->getDefaultInputValue(); ?>" placeholder="<?php echo $SSmiirl->getFirstAction()[HTML_INPUT]; ?>" required>
+			<span class="underline"></span>
       <input id="submit" type="submit" value="<?php echo reset($_ACTIONS)[HTML_SUBMIT]; ?>">
       <?php
       $SSmiirl->printLastLog();

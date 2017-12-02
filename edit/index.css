@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:500');
+@import url('https://fonts.googleapis.com/css?family=Arvo');
+@import url('https://fonts.googleapis.com/css?family=Lato:700');
 body, html {
   margin: 0;
   padding: 0;
   font-size: 20px;
   font-family: "Raleway", sans-serif;
-  background-color: #199a8f;
+  background-image: linear-gradient(#199a8f, #24DBCC);
   color: white;
 }
 form {
@@ -71,7 +73,7 @@ footer div img {
   margin: 0 -5px 0 0;
   padding: 0;
 }
-input, input[type="submit"] {
+input {
   display: block;
   width: 280px;
   height: 40px;
@@ -81,8 +83,48 @@ input, input[type="submit"] {
   box-sizing: border-box;
   border: none;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+input[type="number"] {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #AAAAAA;
+  color: #EEEEEE;
+  box-sizing: border-box;
+  font-family: 'Arvo', sans-serif;
+  font-size: 15px;
+  width: 200px;
+  letter-spacing: 2px;
+  position: relative;
+  transition: all 0.4s ease;
+}
+input[type="number"]::-webkit-input-placeholder {
+  letter-spacing: normal;
+  color: #EEEEEE;
+}
+input[type="number"]:focus::-webkit-input-placeholder {
+  color: white;
+}
+input[type="number"]:focus + .underline {
+  transform: scale(1);
+}
+.underline {
+  background-color: white;
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  top: -6px;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  width: 210px;
+}
 input:focus {
-  border: 1px solid #8dc14a;
   box-shadow: none;
   outline: none;
 }
@@ -90,6 +132,29 @@ input[type="submit"] {
   display: block;
   width: 100%;
   height: 40px;
+  font-family: 'Lato', sans-serif;
+	background: #353535;
+	color: #FFF;
+  width: 280px;
+  height: 40px;
+  font-size: 17px;
+  margin: 5px auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+  border: none;
+  position: relative;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	overflow: hidden;
+	letter-spacing: .08em;
+	border-radius: 0;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
 }
 input[type="radio"] {
   position: absolute;
@@ -113,7 +178,7 @@ label {
   width: 280px;
   height: auto;
   font-size: 16px;
-  text-transform: uppercase;
+  text-transform: full-width;
   word-spacing: 2px;
   border: 1px solid white;
   padding: 0;
@@ -122,7 +187,7 @@ label {
 }
 .group label {
   margin: 0;
-  padding: 5px 5px 5px 20px;
+  padding: 5px 20px;
   display: block;
   position: relative;
   color: #EEEEEE;
@@ -142,11 +207,11 @@ label {
   display: block;
   position: absolute;
   border: 1px solid #EEEEEE;
-  border-radius: 100%;
+  border-radius: 10px;
   height: 20px;
-  width: 20px;
-  top: 3px;
-  right: 15px;
+  width: 40px;
+  top: 3.5px;
+  right: 10px;
 	z-index: 5;
 	transition: border .25s linear;
 	-webkit-transition: border .25s linear;
@@ -155,15 +220,17 @@ label {
   display: block;
   position: absolute;
 	content: '';
-  border-radius: 100%;
+  border-radius: 7.5px;
+  border: 1px solid #EEEEEE;
   height: 15px;
-  width: 14px;
+  width: 20px;
   top: 0;
 	left: 0;
   margin: auto;
-  transform: translateX(3px) translateY(2.5px);
-	transition: background 0.25s linear;
-	-webkit-transition: background 0.25s linear;
+  background-color: #EEEEEE;
+  transform: translateX(1px) translateY(1.5px);
+	transition: all 0.25s linear;
+	-webkit-transition: all 0.25s linear;
 }
 input[type=radio]:checked ~ .check {
   border: 1px solid #0DFF92;
@@ -171,11 +238,13 @@ input[type=radio]:checked ~ .check {
 
 input[type=radio]:checked ~ .check::before{
   background: #0DFF92;
+  border: 1px solid #0DFF92;
+  transform: translateX(17px) translateY(1.5px);
 }
 
 input[type=radio]:checked ~ label{
   color: #0DFF92;
-  background-color: rgba(20, 20, 20, 0.35);
+  background-color: rgba(20, 20, 20, 0.15);
 }
 .wrapper {
   background-color: rgba(20, 20, 20, 0.3);
@@ -198,10 +267,9 @@ input[type=radio]:checked ~ label{
   font-weight: bold;
   font-size: 15px;
   margin: 0 0 20px 0;
-  background-color: rgba(217, 255, 64, 0.95);
-  border-radius: 5px;
+  background-color: rgba(217, 255, 64, 0.09);
   padding: 15px 0 18px 0;
-  color: rgba(30, 30, 30, 0.65);
+  color: #EEEEEE;
 }
 .compteur a {
   display: block;
