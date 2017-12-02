@@ -90,9 +90,10 @@ use SSmiirl\SimpleSmiirlCounter as SSmiirl;
 $SSmiirl = new SSmiirl;
 ```
 
-| API | EXEMPLE | PARAMS | RETURN | DESCRIPTION |
-| --- | --- | --- | --- | --- |
-| `initSmiirlApiPage()` | `echo $SSmiirl->initSmiirlApiPage();` | none | JSON | Return the json data after reading the .json file |
+| API | PARAMS | RETURN | DESCRIPTION |
+| :---: | :---: | :---: | :--- |
+| `initSmiirlApiPage()` | none | JSON | Return the json data after reading the .json file |
+| `echo $SSmiirl->initSmiirlApiPage();` |
 
 ## Installation
 - Just upload files in your apache or nginx server where you specify `$_PROJECT_FOLDER`.
