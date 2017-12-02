@@ -11,9 +11,9 @@ $SSmiirl->initEditPage();
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>DBC Smiirl</title>
-	<meta name="description" content="Formulaire de modification Smiirl">
-	<meta name="robots" content="noindex, nofollow, noodp">
+	<title>Demo Simple Smiirl Counter</title>
+	<meta name="description" content="Demo of the custom counter of the Smiirl company. Easy implementation demo of the editing action of the Simple Smiirl Counter app.">
+	<meta name="robots" content="index, follow, noodp">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="index.css">
 </head>
@@ -38,6 +38,20 @@ $SSmiirl->initEditPage();
       ?>
     </div>
   </form>
+	<footer>
+		<div>&copy;
+			<a href="//allandolle.fr" title="Web Developer and consultant SEO" rel="author">
+				Allan Dollé
+			</a>
+			<span>|</span>
+			<a href="https://github.com/blephy/simple-smiirl-counter" title="Repo of the app Simple Smiirl Counter">
+				<img src="//allandolle.fr/images/social/github-white.svg" alt="Aymeric Sans Github White Icon Svg" />
+			</a>
+			<a href="https://github.com/blephy/simple-smiirl-counter" title="Repo of the app Simple Smiirl Counter">
+			Github Repository
+			</a>
+		</div>
+	</footer>
   <?php if ( $_ACTIVE_EASTER_EGGS ) { include '../template/easter-egg.php';} ?>
   <script type="text/javascript" src="index.js"></script>
 </body>

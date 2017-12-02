@@ -16,10 +16,14 @@ class ActionRadios {
     $checked = 'checked';
     foreach ( $temp_actions as $key => $value ) {
       if ($value[ACTIVE]) {
-        echo '<div class="group">'.$value[HTML_RADIO].
+        echo '<div class="group">'.
              '<input id="'.$key.
-             '" class="params" type="radio" name="'.RADIO_PARAMS.'" value="'.$key.
-             '"'.$checked.'></div>';
+              '" class="params" type="radio" name="'.RADIO_PARAMS.'" value="'.$key.
+              '"'.$checked.'>'.
+             '<label for="'.$key.
+             '">'.$value[HTML_RADIO].'</label>'.
+             '<span class="check"></span>'.
+             '</div>';
         echo ('<script>
               document.getElementById("'.$key.'").onclick = function() {
                 changeHTML([

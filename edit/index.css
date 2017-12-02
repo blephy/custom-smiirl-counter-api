@@ -4,6 +4,8 @@ body, html {
   padding: 0;
   font-size: 20px;
   font-family: "Raleway", sans-serif;
+  background-color: #199a8f;
+  color: white;
 }
 form {
   width: 100vw;
@@ -15,6 +17,59 @@ form {
   justify-content: center;
   align-items: center;
   perspective: 2000px;
+}
+footer {
+  width: 100vw;
+  height: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer div {
+  width: 100vw;
+  height: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+footer div {
+  color: white;
+  box-sizing: border-box;
+  line-height: 20px;
+  height: 20px;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
+footer div a {
+  color: white;
+  box-sizing: border-box;
+  display: block;
+  width: auto;
+  height: 20px;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 20px;
+  height: 20px;
+  padding: 0;
+  margin: 0 5px;
+}
+footer div span {
+  margin: 0 13px;
+}
+footer div img {
+  width: 20px;
+  height: 20px;
+  margin: 0 -5px 0 0;
+  padding: 0;
 }
 input, input[type="submit"] {
   display: block;
@@ -37,10 +92,8 @@ input[type="submit"] {
   height: 40px;
 }
 input[type="radio"] {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  margin: 0 0 0 20px;
+  position: absolute;
+  visibility: hidden;
 }
 input[type="radio"]:focus, input[type="radio"]:checked {
   border: none;
@@ -58,9 +111,71 @@ label {
   justify-content: space-between;
   align-items: center;
   width: 280px;
+  height: auto;
   font-size: 16px;
   text-transform: uppercase;
   word-spacing: 2px;
+  border: 1px solid white;
+  padding: 0;
+  margin-bottom: 5px;
+  position: relative;
+}
+.group label {
+  margin: 0;
+  padding: 5px 5px 5px 20px;
+  display: block;
+  position: relative;
+  color: #EEEEEE;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 9;
+  -webkit-transition: all 0.25s linear;
+}
+.group label:hover {
+  color: #FFFFFF;
+}
+.group label:hover .check {
+  border: 1px solid #FFFFFF;
+}
+.check {
+  display: block;
+  position: absolute;
+  border: 1px solid #EEEEEE;
+  border-radius: 100%;
+  height: 20px;
+  width: 20px;
+  top: 3px;
+  right: 15px;
+	z-index: 5;
+	transition: border .25s linear;
+	-webkit-transition: border .25s linear;
+}
+.check::before {
+  display: block;
+  position: absolute;
+	content: '';
+  border-radius: 100%;
+  height: 15px;
+  width: 14px;
+  top: 0;
+	left: 0;
+  margin: auto;
+  transform: translateX(3px) translateY(2.5px);
+	transition: background 0.25s linear;
+	-webkit-transition: background 0.25s linear;
+}
+input[type=radio]:checked ~ .check {
+  border: 1px solid #0DFF92;
+}
+
+input[type=radio]:checked ~ .check::before{
+  background: #0DFF92;
+}
+
+input[type=radio]:checked ~ label{
+  color: #0DFF92;
+  background-color: rgba(20, 20, 20, 0.35);
 }
 .wrapper {
   background-color: rgba(20, 20, 20, 0.3);
@@ -83,7 +198,7 @@ label {
   font-weight: bold;
   font-size: 15px;
   margin: 0 0 20px 0;
-  background-color: #8dc14a;
+  background-color: rgba(217, 255, 64, 0.95);
   border-radius: 5px;
   padding: 15px 0 18px 0;
   color: rgba(30, 30, 30, 0.65);
@@ -95,13 +210,14 @@ label {
   height: 30px;
   line-height: 28px;
   margin: 5px 40px 0;
+  font-size: 18px;
   padding: 0;
   box-sizing: border-box;
-  box-shadow: 0 0px 25px -2px #dd3333;
+  box-shadow: 0 3px 7px 1px rgba(150, 76, 102, 0.97);
   cursor: pointer;
-  background-color: #dd3333;
+  background-color: rgba(255, 76, 102, 0.97);
   text-decoration: none;
-  color: black;
+  color: rgba(30, 30, 30, 0.75);
   letter-spacing: 2.5px;
 }
 .log {
@@ -115,8 +231,8 @@ label {
   font-family: monospace;
 }
 .line {
-  background-color: rgba(255, 255, 255, 0.7);
-  margin: 2.5px 0;
+  background-color: rgba(20, 20, 20, 0.3);
+  margin: 1.5px 0;
 }
 .hide {
   display: none;

@@ -60,7 +60,7 @@ $_DEFAULT_TITLE_LOG = 'HISTORIQUE';
 $_ACTIONS = [
   'AJOUTER' => [
     ACTIVE => true,
-    HTML_RADIO => 'Chiffre d\'affaire HT : ',
+    HTML_RADIO => 'Chiffre d\'affaire HT',
     HTML_INPUT => 'CA à ajouter : ',
     DISPLAY_INPUT => true,
     HTML_SUBMIT => 'Ajouter',
@@ -70,7 +70,7 @@ $_ACTIONS = [
   ],
   'ENLEVER' => [
     ACTIVE => true,
-    HTML_RADIO => 'Annulation HT : ',
+    HTML_RADIO => 'Annulation HT',
     HTML_INPUT => 'CA à enlever : ',
     DISPLAY_INPUT => true,
     HTML_SUBMIT => 'Enlever',
@@ -80,7 +80,7 @@ $_ACTIONS = [
   ],
   'ECRASER' => [
     ACTIVE => true,
-    HTML_RADIO => 'Ecraser : ',
+    HTML_RADIO => 'Ecraser',
     HTML_INPUT => 'Changer la valeur en : ',
     DISPLAY_INPUT => true,
     HTML_SUBMIT => 'Redéfinir',
@@ -90,7 +90,7 @@ $_ACTIONS = [
   ],
   'AJOUTE_POURCENT' => [
     ACTIVE => true,
-    HTML_RADIO => 'Augmenter de "X" % : ',
+    HTML_RADIO => 'Augmenter de "X" %',
     HTML_INPUT => 'Pourcentage à ajouter : ',
     DISPLAY_INPUT => true,
     HTML_SUBMIT => 'Ajouter %',
@@ -100,7 +100,7 @@ $_ACTIONS = [
   ],
   'ENLEVE_POURCENT' => [
     ACTIVE => true,
-    HTML_RADIO => 'Diminuer de "X" % : ',
+    HTML_RADIO => 'Diminuer de "X" %',
     HTML_INPUT => 'Pourcentage à enlever : ',
     DISPLAY_INPUT => true,
     HTML_SUBMIT => 'Enlever %',
@@ -110,7 +110,7 @@ $_ACTIONS = [
   ],
   'RESET' => [
     ACTIVE => true,
-    HTML_RADIO => 'Reset : ',
+    HTML_RADIO => 'Reset',
     HTML_INPUT => 'Votre compteur sera remis à zero : ',
     DISPLAY_INPUT => false,
     HTML_SUBMIT => 'Reset',
