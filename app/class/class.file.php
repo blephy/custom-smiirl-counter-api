@@ -12,8 +12,22 @@ class File {
     }
   }
 
+  public function isFileExist() {
+    return file_exists($this->_app->getJsonFilePath());
+  }
+
+  public function initFile() {
+    $temp = json_encode([$this->_app->getJsonKey() => 0]);
+    return file_put_contents($this->_app->getJsonFilePath(), $temp, LOCK_EX);
+  }
+
   public function content() {
-    $this->_content = json_decode(file_get_contents($this->_app->getJsonFilePath()), true);
+    if ($this->isFileExist()) {
+      $this->_content = json_decode(file_get_contents($this->_app->getJsonFilePath()), true);
+    } else {
+      $this->initFile();
+      $this->_content = json_decode(file_get_contents($this->_app->getJsonFilePath()), true);
+    }
     return $this->_content;
   }
 
@@ -22,13 +36,17 @@ class File {
   }
 
   public function writeJsonData($json_data) {
-    return file_put_contents($this->_app->getJsonFilePath(), $json_data, LOCK_EX);
+    if ($this->isFileExist()) {
+      return file_put_contents($this->_app->getJsonFilePath(), $json_data, LOCK_EX);
+    } else {
+      $this->initFile();
+      return file_put_contents($this->_app->getJsonFilePath(), $json_data, LOCK_EX);
+    }
   }
 
   public function writeNumber($number) {
     $temp = json_encode([$this->_app->getJsonKey() => $number]);
     return $this->writeJsonData($temp);
   }
-
 }
 ?>
