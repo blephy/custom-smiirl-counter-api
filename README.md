@@ -49,6 +49,8 @@ You can customise actions. See `$_ACTIONS` in [config/client.php](config/client.
   - Action `AJOUTER` : Add the input number value to the existing number.
   - Action `ENLEVER` : Remove the input number value to the existing number
   - Action `ECRASER` : Erase the existing number by the input number value.
+  - Action `AJOUTE_POURCENT` : Add input % to the existing number.
+  - Action `ENLEVE_POURCENT` : Add input % to the existing number.
   - Action `RESET` : Reset existing number to zero.
 
 - **Add a new action :**

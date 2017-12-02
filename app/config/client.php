@@ -88,7 +88,7 @@ $_ACTIONS = [
       return $new;
     }
   ],
-  'AJOUT_POURCENT' => [
+  'AJOUTE_POURCENT' => [
     ACTIVE => true,
     HTML_RADIO => 'Augmenter de "X" % : ',
     HTML_INPUT => 'Pourcentage à ajouter : ',
