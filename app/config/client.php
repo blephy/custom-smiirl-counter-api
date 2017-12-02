@@ -88,6 +88,26 @@ $_ACTIONS = [
       return $new;
     }
   ],
+  'AJOUT_POURCENT' => [
+    ACTIVE => true,
+    HTML_RADIO => 'Augmenter de "X" % : ',
+    HTML_INPUT => 'Pourcentage à ajouter : ',
+    DISPLAY_INPUT => true,
+    HTML_SUBMIT => 'Ajouter %',
+    MATH => function ($old, $new) {
+      return $old + ($old*$new/100);
+    }
+  ],
+  'ENLEVE_POURCENT' => [
+    ACTIVE => true,
+    HTML_RADIO => 'Diminuer de "X" % : ',
+    HTML_INPUT => 'Pourcentage à enlever : ',
+    DISPLAY_INPUT => true,
+    HTML_SUBMIT => 'Enlever %',
+    MATH => function ($old, $new) {
+      return $old - ($old*$new/100);
+    }
+  ],
   'RESET' => [
     ACTIVE => true,
     HTML_RADIO => 'Reset : ',
