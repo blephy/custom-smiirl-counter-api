@@ -12,7 +12,7 @@ This repo let you **show custom number** in your custom smiirl counter, and add 
 ---
 **No MySQL database are needed.**
 
-This repository is in operation at [dbcrenovation.fr](//dbcrenovation.fr/smiirl/)
+This repository is in operation at [dbcrenovation.fr](//allandolle.fr/simple-smiirl-counter/)
 
 ![Screenshot edit smiirl counter interface](screenshot.png)
 

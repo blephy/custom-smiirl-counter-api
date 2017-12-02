@@ -1,4 +1,4 @@
-#AuthType Basic
-#AuthName "My Protected Area"
-#AuthUserFile /home/dbcrenovmz/www/smiirl/edit/.htpasswd
-#Require valid-user
+AuthType Basic
+AuthName "My Protected Area"
+AuthUserFile /var/www/allandolle.fr/simple-smiirl-counter/edit/.htpasswd
+Require valid-user
