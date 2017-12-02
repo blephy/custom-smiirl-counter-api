@@ -7,7 +7,7 @@ $_ROOT_URL = $_SERVER['HTTP_HOST'];
 // Exemple : '/simple-smiirl-counter' if you upload
 // the app under https://your-domaine.fr/simple-smiirl-counter
 // [STRING]
-$_PROJECT_FOLDER = '/simple-smiirl-counter';
+$_PROJECT_FOLDER = '/custom-smiirl-counter-api';
 
 // Do not change this variable unless you know what you are doing
 $_ROOT_FOLDER = $_SERVER['DOCUMENT_ROOT'].$_PROJECT_FOLDER;

@@ -1,6 +1,6 @@
-# simple-smiirl-counter
-Simple and fast integration of the perso / custom [Smiirl](http://www.smiirl.com/fr/) counter.
-This repo let you **show custom number** in your custom smiirl counter, and add **simple possibility to edit the number** with a basic user interface ([folder edit](edit/)).
+# custom-smiirl-counter-api
+Simple and fast integration of the perso / custom [Smiirl](http://www.smiirl.com/en/) counter.
+This repo let you **show custom number** in your [custom smiirl counter](http://www.smiirl.com/en/counter/custom), and add **simple possibility to edit the number** with a basic user interface ([folder edit](edit/)).
 
 - **Print out your custom number** in _JSON format_ for you Smiirl Counter.
 - _Custom number_ **can be edit** thanks to a User Interface.
@@ -25,7 +25,7 @@ This repo let you **show custom number** in your custom smiirl counter, and add 
 - PHP 7+
 
 ## Smiirl Documentation
-Please, you maybe need to read the [official documentation of Smiirl](http://static.smiirl.com/wp-content/uploads/2017/05/guide-custom-sup.pdf).
+Please, you maybe need to read the [official documentation of Smiirl](http://static.smiirl.com/wp-content/uploads/2017/07/guide-custom-en.pdf).
 
 ## Configuration
 ### Basic
