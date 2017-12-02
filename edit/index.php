@@ -11,8 +11,8 @@ $SSmiirl->initEditPage();
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Demo Simple Smiirl Counter</title>
-	<meta name="description" content="Demo of the custom counter of the Smiirl company. Easy implementation demo of the editing action of the Simple Smiirl Counter app.">
+	<title>Demo Custom Smiirl Counter Api - Allan Dollé</title>
+	<meta name="description" content="Demo of the custom counter of the Smiirl company. Easy implementation of the editing action of the Custom Smiirl Counter Api.">
 	<meta name="robots" content="index, follow, noodp">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="index.css">

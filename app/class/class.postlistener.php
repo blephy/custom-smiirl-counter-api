@@ -20,11 +20,30 @@ class PostListener {
       if ( $_POST[RADIO_PARAMS] && $_POST[$this->_app->getJsonKey()] >= 0) {
         if ( in_array($_POST[RADIO_PARAMS], array_keys($this->_app->getActions())) ) {
           $math = $this->_app->getActions()[$_POST[RADIO_PARAMS]][MATH];
-          $result = intval($math($reel_content[$this->_app->getJsonKey()], $_POST[$this->_app->getJsonKey()]));
+          $result = $this->returnOnlyInt(
+                      $this->returnOnlyPositiv(
+                        $math(
+                          $reel_content[$this->_app->getJsonKey()],
+                          $_POST[$this->_app->getJsonKey()]
+                          )
+                        )
+                      );
           $this->_app->getFileInstance()->writeNumber($result);
           $this->_app->getLogInstance()->write($result);
         }
       }
+    }
+  }
+
+  public function returnOnlyInt($number) {
+    return intval($number);
+  }
+
+  public function returnOnlyPositiv($number) {
+    if ($number >= 0) {
+      return abs($number);
+    } else {
+      return 0;
     }
   }
 }

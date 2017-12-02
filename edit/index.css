@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:500');
 @import url('https://fonts.googleapis.com/css?family=Arvo');
-@import url('https://fonts.googleapis.com/css?family=Lato:700');
+@import url('https://fonts.googleapis.com/css?family=Lato:400:700');
 body, html {
   margin: 0;
   padding: 0;
@@ -11,7 +11,8 @@ body, html {
 }
 form {
   width: 100vw;
-  height: 100vh;
+  height: auto;
+  min-height: 100vh;
   box-sizing: border-box;
   display: flex;
   flex-wrap: nowrap;
@@ -29,9 +30,11 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
+  font-family: 'Lato', sans-serif;
 }
 
-footer div {
+/*footer div {
   width: 100vw;
   height: 30px;
   box-sizing: border-box;
@@ -40,16 +43,22 @@ footer div {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-}
+}*/
 
 footer div {
   color: white;
   box-sizing: border-box;
   line-height: 20px;
   height: 20px;
+  width: 280px;
   font-size: 16px;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 footer div a {
   color: white;
@@ -62,15 +71,15 @@ footer div a {
   line-height: 20px;
   height: 20px;
   padding: 0;
-  margin: 0 5px;
+  margin: 0 0px;
 }
 footer div span {
-  margin: 0 13px;
+  margin: 0 0px;
 }
 footer div img {
   width: 20px;
   height: 20px;
-  margin: 0 -5px 0 0;
+  margin: 0 0px 0 0;
   padding: 0;
 }
 input {
@@ -109,7 +118,7 @@ input[type="number"]::-webkit-input-placeholder {
 input[type="number"]:focus::-webkit-input-placeholder {
   color: white;
 }
-input[type="number"]:focus + .underline {
+input[type="number"]:focus + .underline, input[type="number"]:hover + .underline {
   transform: scale(1);
 }
 .underline {
@@ -248,13 +257,13 @@ input[type=radio]:checked ~ label{
 }
 .wrapper {
   background-color: rgba(20, 20, 20, 0.3);
-  box-shadow: -4px 20px 50px 10px rgba(20, 20, 20, 0.3);
+  box-shadow: -4px 10px 50px 10px rgba(20, 20, 20, 0.2);
   width: 320px;
   padding: 15px 20px;
   box-sizing: border-box;
   height: auto;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex-direction: column;
   justify-content: center;
   -webkit-font-smoothing: antialiased;
