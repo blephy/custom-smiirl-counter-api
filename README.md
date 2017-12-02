@@ -90,10 +90,13 @@ use SSmiirl\SimpleSmiirlCounter as SSmiirl;
 $SSmiirl = new SSmiirl;
 ```
 
+**Legend :**
+- :maple_leaf: --> [app/config/client.php](app/config/client.php)
+
 | API | PARAMS | RETURN | DESCRIPTION |
 | :---: | :---: | :---: | :--- |
-| `initSmiirlApiPage()` | none | JSON | Init functions and class needed to your api custom page. Return the json data after reading the .json file `$_PATH_JSON_FILE`.<br>**Exemple :**<br>`echo $SSmiirl->initSmiirlApiPage();` |
-| `initEditPage()` | none | null | Init the function needed to your edit custom page. Listen `$_POST[]`, Read and write json file `$_PATH_JSON_FILE`, read and write log file `$_PATH_LOG_FILE`.<br>**Exemple :**<br>` $SSmiirl->initEditPage();` |
+| `initSmiirlApiPage()` | none | JSON | Init functions and class needed to your api custom page. Return the json data after reading the .json file :maple_leaf:`$_PATH_JSON_FILE`.<br>**Exemple :**<br>`echo $SSmiirl->initSmiirlApiPage();` |
+| `initEditPage()` | none | null | Init the function needed to your edit custom page. Listen `$_POST[]`, Read and write json file :maple_leaf:`$_PATH_JSON_FILE`, read and write log file :maple_leaf:`$_PATH_LOG_FILE`.<br>**Exemple :**<br>` $SSmiirl->initEditPage();` |
 
 ## Installation
 - Just upload files in your apache or nginx server where you specify `$_PROJECT_FOLDER`.
