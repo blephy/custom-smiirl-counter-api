@@ -1,4 +1,6 @@
 <?php
+namespace SSmiirl;
+
 include_once 'config/actions-type.php';
 include_once 'config/logs-type.php';
 include_once 'config/params-type.php';
@@ -8,6 +10,12 @@ include_once 'class/class.log.php';
 include_once 'class/class.smiirlapi.php';
 include_once 'class/class.postlistener.php';
 include_once 'class/class.actionradio.php';
+
+use File as JsonFile;
+use Log as LogFile;
+use ActionRadios as ActionRadios;
+use PostListener as PostListener;
+use SmiirlApi as SmiirlApi;
 
 class SimpleSmiirlCounter {
 
@@ -76,8 +84,8 @@ class SimpleSmiirlCounter {
       $this->_default_title_log = $_DEFAULT_TITLE_LOG;
     }
 
-    $this->_file_instance = new File($this);
-    $this->_log_instance = new Log($this);
+    $this->_file_instance = new JsonFile($this);
+    $this->_log_instance = new LogFile($this);
     $this->_actionradios_instance = new ActionRadios($this);
   }
 

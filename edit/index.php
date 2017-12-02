@@ -1,9 +1,9 @@
 <?php
 include_once '../app/simple-smiirl-counter.php';
 
-use SimpleSmiirlCounter as SSmiirl;
+use SSmiirl\SimpleSmiirlCounter as SSmiirl;
 
-$SSmiirl = new SSmiirl();
+$SSmiirl = new SSmiirl;
 
 $SSmiirl->initEditPage();
 ?>
