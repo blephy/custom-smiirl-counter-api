@@ -1,5 +1,5 @@
 <?php if ($_POST) { ?>
-  <?php if ( random_int(0, 10) <= 4 ) { ?>
+  <?php if ( random_int(0, 9) <= 4 ) { ?>
     <iframe class="hide" src="https://giphy.com/embed/7rj2ZgttvgomY" width="480" height="275" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
     <audio id="audio" preload="auto" autoplay>
       <source src="../template/applause.mp3" type="audio/mp3">

@@ -7,20 +7,23 @@ $_ROOT_URL = $_SERVER['HTTP_HOST'];
 // Exemple : '/simple-smiirl-counter' if you upload
 // the app under https://your-domaine.fr/simple-smiirl-counter
 // [STRING]
-$_PROJECT_FOLDER = '/test';
+$_PROJECT_FOLDER = '/simple-smiirl-counter';
 
 // Do not change this variable unless you know what you are doing
 $_ROOT_FOLDER = $_SERVER['DOCUMENT_ROOT'].$_PROJECT_FOLDER;
 
-// The URL or relative path of the .json file
-// First level is you root folder variable bellow
-// [STRING]
-$_PATH_JSON_FILE = '/number.json';
+// Do not change this variable unless you know what you are doing
+$_APP_FOLDER = $_ROOT_FOLDER.'/app';
 
-// The URL or relative path of the log file
-// First level is you root folder variable bellow
+// The URL or relative path of the .json file
+// First level is the $_APP_FOLDER variable bellow
 // [STRING]
-$_PATH_LOG_FILE = '/log/edit.log';
+$_PATH_JSON_FILE = '/json/number.json';
+
+// The URL or relative path of the actions log file
+// First level is the $_APP_FOLDER variable bellow
+// [STRING]
+$_PATH_LOG_FILE = '/log/actions.log';
 
 // The key name in front of the value number in your .json file
 // [STRING]
@@ -37,6 +40,10 @@ $_DEFAULT_INPUT_VALUE = '';
 // HTML Displayed on top of Counter's number
 // [STRING]
 $_HTML_COUNT = 'Valeur du compteur';
+
+// HTML Title displayed on top of Log
+// [STRING]
+$_DEFAULT_TITLE_LOG = 'HISTORIQUE';
 
 // Possible actions implemented
 // [ARRAY]

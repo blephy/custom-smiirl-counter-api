@@ -1,19 +1,13 @@
 <?php
-include_once 'config/actions-type.php';
-include_once 'config/client.php';
-include_once 'class/class.file.php';
+include_once 'app/simple-smiirl-counter.php';
 
-$FILE = new File();
+use SimpleSmiirlCounter as SSmiirl;
 
-// We return Json data, so editing the header.
-header('Content-type: application/json; charset=utf-8');
-
-// Get the .json file content
-$reel_value = $FILE->content();
-
-// Compile json data with .json file content
-$data = json_encode([$FILE->key() => $reel_value[$FILE->key()]]);
+$SSmiirl = new SSmiirl();
 
 // Show JSON data to Smiirl
-echo $data;
+// You must declare into your Smiirl account this Url page
+// in order to print the number on your physical Smiirl counter
+// Please refer to the Project's README.md
+echo $SSmiirl->initSmiirlApiPage();
 ?>

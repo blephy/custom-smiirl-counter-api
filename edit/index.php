@@ -1,15 +1,11 @@
 <?php
-include_once '../config/actions-type.php';
-include_once '../config/client.php';
-include_once '../class/class.file.php';
-include_once '../class/class.log.php';
-include_once '../class/class.utils.php';
+include_once '../app/simple-smiirl-counter.php';
 
-$FILE = new File();
-$LOG = new Log();
-$UTILS = new Utils();
+use SimpleSmiirlCounter as SSmiirl;
 
-$UTILS->listenRequest();
+$SSmiirl = new SSmiirl();
+
+$SSmiirl->initEditPage();
 ?>
 <!DOCTYPE html>
 <html>
@@ -28,17 +24,17 @@ $UTILS->listenRequest();
       <label class="compteur" for="">
         <?php echo $_HTML_COUNT; ?><br>
         <a href="//<?php echo $_ROOT_URL.$_PROJECT_FOLDER; ?>" title="Voir le fichier Json réel">
-          <?php echo $FILE->value(); ?>
+          <?php echo $SSmiirl->getCounterValue(); ?>
         </a>
       </label>
       <?php
-      $UTILS->printHtmlRadios();
+      $SSmiirl->printActionsRadios();
       ?>
-      <label id="html_input" for=""><?php echo reset($_ACTIONS)[HTML_INPUT]; ?></label>
-      <input id="input" type="number" name="<?php echo $FILE->key(); ?>" value="<?php echo $_DEFAULT_INPUT_VALUE; ?>" required>
+      <label id="html_input" for=""><?php echo $SSmiirl->getFirstAction()[HTML_INPUT]; ?></label>
+      <input id="input" type="number" name="<?php echo $SSmiirl->getJsonKey(); ?>" value="<?php echo $SSmiirl->getDefaultInputValue(); ?>" required>
       <input id="submit" type="submit" value="<?php echo reset($_ACTIONS)[HTML_SUBMIT]; ?>">
       <?php
-      $LOG->printLast(5, 'HISTORIQUE');
+      $SSmiirl->printLastLog(5);
       ?>
     </div>
   </form>
