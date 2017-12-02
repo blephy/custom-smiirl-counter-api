@@ -78,7 +78,21 @@ You can customise actions. See `$_ACTIONS` in [config/client.php](config/client.
 Just learn CSS language and edit [edit/index.css](edit/index.css)
 
 ### API
-You can construct your home made solution. Documentation in progress ...
+You can construct your home made solution. You need to add this php code on top of your
+.php file ():
+```php
+// Exemple of include
+// Edit this include path with your directive directory
+include_once 'app/simple-smiirl-counter.php';
+
+use SSmiirl\SimpleSmiirlCounter as SSmiirl;
+
+$SSmiirl = new SSmiirl;
+```
+
+| API | EXEMPLE | PARAMS | RETURN | DESCRIPTION |
+| --- | ------- | ------ | ----------- |
+| `initSmiirlApiPage()` | `echo $SSmiirl->initSmiirlApiPage();` | none | JSON | Return the json data after reading the .json file |
 
 ## Installation
 - Just upload files in your apache or nginx server where you specify `$_PROJECT_FOLDER`.
