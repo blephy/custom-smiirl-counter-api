@@ -91,7 +91,7 @@ $SSmiirl = new SSmiirl;
 ```
 
 **Legend :**
-- :maple_leaf: --> [app/config/client.php](app/config/client.php)
+- :maple_leaf: --> [Configuration file](app/config/client.php)
 
 | API | PARAMS | RETURN | DESCRIPTION |
 | :---: | :---: | :---: | :--- |
