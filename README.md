@@ -11,9 +11,9 @@ This repo let you **show custom number** in your custom smiirl counter, and add 
 - **No MySQL database** needed.
 
 ## Demo
-![Screenshot edit smiirl counter interface](screenshot.png)
+<center>![Screenshot edit smiirl counter interface](screenshot.png)
 
-[allandolle.fr/simple-smiirl-counter](//allandolle.fr/simple-smiirl-counter/)
+[allandolle.fr/simple-smiirl-counter](//allandolle.fr/simple-smiirl-counter/)</center>
 
 ## Requirements
 - [Nginx](https://nginx.org/en/) or [Apache](https://httpd.apache.org/)
