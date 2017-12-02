@@ -99,8 +99,13 @@ $SSmiirl = new SSmiirl;
 echo $SSmiirl->initSmiirlApiPage();
 ```
 
+| API | PARAMS | RETURN | DESCRIPTION |
 | :---: | :---: | :---: | :--- |
 | `initEditPage()` | none | null | Init the function needed to your edit custom page. Listen $_POST[], Read and write number, read and write log |
+```php
+// Exemple
+$SSmiirl->initEditPage();
+```
 
 ## Installation
 - Just upload files in your apache or nginx server where you specify `$_PROJECT_FOLDER`.
