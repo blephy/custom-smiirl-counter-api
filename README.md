@@ -101,7 +101,7 @@ echo $SSmiirl->initSmiirlApiPage();
 
 | API | PARAMS | RETURN | DESCRIPTION |
 | :---: | :---: | :---: | :--- |
-| `initEditPage()` | none | null | Init the function needed to your edit custom page. Listen $_POST[], Read and write json file `$_PATH_JSON_FILE`, read and write log file `$_PATH_LOG_FILE` |
+| `initEditPage()` | none | null | Init the function needed to your edit custom page. Listen `$_POST[]`, Read and write json file `$_PATH_JSON_FILE`, read and write log file `$_PATH_LOG_FILE` |
 ```php
 // Exemple
 $SSmiirl->initEditPage();
