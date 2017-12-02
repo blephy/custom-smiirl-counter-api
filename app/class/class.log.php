@@ -12,7 +12,18 @@ class Log {
     }
   }
 
+  public function isLogExist() {
+    return file_exists($this->_app->getLogFilePath());
+  }
+
+  public function initLog() {
+    return file_put_contents($this->_app->getLogFilePath(), '', LOCK_EX);
+  }
+
   public function write($number) {
+    if (!$this->isLogExist()) {
+      $this->initLog();
+    }
     $date = date("d/m/Y G:i:s");
     $new_line = "\r\n";
     $ip = $_SERVER['REMOTE_ADDR'];
@@ -27,11 +38,10 @@ class Log {
     return file_put_contents($this->_app->getLogFilePath(), $this->_content.$log, FILE_APPEND | LOCK_EX);
   }
 
-  public function erase() {
-    return file_put_contents($this->_app->getLogFilePath(), '');
-  }
-
   public function content() {
+    if (!$this->isLogExist()) {
+      $this->initLog();
+    }
     $this->_content = file_get_contents($this->_app->getLogFilePath());
     return $this->_content;
   }
