@@ -8,13 +8,12 @@ This repo let you **show custom number** in your custom smiirl counter, and add 
 - **Add new action and mathematical operation** setup with ease.
 - _Editing history_ **can be printed**.
 - All editing actions **are logged in [log/edit.log](log/edit.log)**.
+- **No MySQL database** needed.
 
----
-**No MySQL database are needed.**
-
-This repository is in operation at [dbcrenovation.fr](//allandolle.fr/simple-smiirl-counter/)
-
+## Demo
 ![Screenshot edit smiirl counter interface](screenshot.png)
+
+[allandolle.fr/simple-smiirl-counter](//allandolle.fr/simple-smiirl-counter/)
 
 ## Requirements
 - [Nginx](https://nginx.org/en/) or [Apache](https://httpd.apache.org/)
