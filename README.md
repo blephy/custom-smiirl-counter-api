@@ -70,7 +70,7 @@ You can customise actions. See `$_ACTIONS` in [config/client.php](config/client.
   - `HTML_INPUT` : HTML Output in front of the html's input when the radio is selected.
   - `DISPLAY_INPUT` : Display or not the form's input if the action is selected.
   - `HTML_SUBMIT` : HTML value of the submit button when the radio is selected.
-  - `MATH` : An operation function with 2 parameters (old value counter and new input value)
+  - `MATH` : An operation function with 2 parameters (old value counter and new input value). Please note that your callback function must have 2 parameters, the first (`$old` in the exemple below) is the current value of the counter and the second (`$new` in the exemple below) is the form's input value.
 ```php
 'MY_NEW_ACTION' => [
   ACTIVE => true,
@@ -120,7 +120,7 @@ $SSmiirl = new SSmiirl;
 
 - Go to your [Smiirl Account](https://my.smiirl.com/login) and specify your configuration.
 > Exemple :
-> If you follow the exemple bellow, specify _http://your-domaine-name.com/Smiirl/_ as URL in your Smiirl Account
+> If you follow the exemple above, specify _http://your-domaine-name.com/Smiirl/_ as URL in your Smiirl Account
 
 - (Optional) Protect the editing action with php (restrictive IP / cookie / account session ...) or with .htpasswd (Ask Google)
 - Enjoy !
