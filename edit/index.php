@@ -6,6 +6,7 @@ use SSmiirl\SimpleSmiirlCounter as SSmiirl;
 $SSmiirl = new SSmiirl;
 
 $SSmiirl->initEditPage();
+$SSmiirl->initUsersAccess();
 ?>
 <!DOCTYPE html>
 <html>

@@ -4,18 +4,21 @@ namespace SSmiirl;
 include_once 'config/actions-type.php';
 include_once 'config/logs-type.php';
 include_once 'config/params-type.php';
+include_once 'config/users-type.php';
 include_once 'config/client.php';
 include_once 'class/class.file.php';
 include_once 'class/class.log.php';
 include_once 'class/class.smiirlapi.php';
 include_once 'class/class.postlistener.php';
 include_once 'class/class.actionradio.php';
+include_once 'class/class.user.php';
 
 use File as JsonFile;
 use Log as LogFile;
 use ActionRadios as ActionRadios;
 use PostListener as PostListener;
 use SmiirlApi as SmiirlApi;
+use User as UserAccess;
 
 class SimpleSmiirlCounter {
 
@@ -25,6 +28,7 @@ class SimpleSmiirlCounter {
 
   protected $_json_key;
   protected $_actions;
+  protected $_users;
   protected $_default_input_value;
   protected $_default_title_log;
 
@@ -32,6 +36,7 @@ class SimpleSmiirlCounter {
   protected $_file_instance;
   protected $_log_instance;
   protected $_actionradios_instance;
+  protected $_users_instances;
 
   // Available after calling a specific method
   protected $_post_listener_instance;
@@ -43,6 +48,7 @@ class SimpleSmiirlCounter {
                               $path_to_log_file = null,
                               $json_key = null,
                               $actions = null,
+                              $users = null,
                               $default_input_value = null,
                               $default_title_log = null) {
     global $_APP_FOLDER,
@@ -50,6 +56,7 @@ class SimpleSmiirlCounter {
            $_PATH_LOG_FILE,
            $_KEY_NAME,
            $_ACTIONS,
+           $_USERS,
            $_DEFAULT_INPUT_VALUE,
            $_DEFAULT_TITLE_LOG;
 
@@ -73,6 +80,11 @@ class SimpleSmiirlCounter {
     } else {
       $this->_actions = $_ACTIONS;
     }
+    if ($users != null) {
+      $this->_users = $users;
+    } else {
+      $this->_users = $_USERS;
+    }
     if ($default_input_value != null) {
       $this->_default_input_value = $default_input_value;
     } else {
@@ -95,6 +107,12 @@ class SimpleSmiirlCounter {
 
   public function initSmiirlApiPage() {
     $this->_smiirlapi_instance = new SmiirlApi($this);
+  }
+
+  public function initUsersAccess() {
+    foreach ($this->_users as $key => $value) {
+      $this->users_instances[] =  new UserAccess($this, $key, $value);
+    }
   }
 
   public function getJsonFilePath() {

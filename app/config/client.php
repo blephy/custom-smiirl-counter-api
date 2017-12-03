@@ -124,8 +124,12 @@ $_ACTIONS = [
 $_USERS = [
   'Custom' => [
     PASSWORD => 'smiirl',
+    ACCESS_TYPE => WRITE_ACCESS
   ],
-  EVERYONE => READ_ACCESS
+  EVERYONE => [
+    PASSWORD => null,
+    ACCESS_TYPE => READ_ACCESS
+  ]
 ];
 
 ?>
