@@ -120,4 +120,12 @@ $_ACTIONS = [
   ]
 ];
 
+// User Account for Edit Action
+$_USERS = [
+  'Custom' => [
+    PASSWORD => 'smiirl',
+  ],
+  EVERYONE => READ_ACCESS
+];
+
 ?>
