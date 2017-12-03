@@ -15,7 +15,7 @@ $CSmiirl->initUsersAccess();
 	<title>Demo Custom Smiirl Counter Api - Allan Dollé</title>
 	<meta name="description" content="Demo of the custom counter of the Smiirl company. Easy implementation of the editing action of the Custom Smiirl Counter Api.">
 	<meta name="robots" content="index, follow, noodp">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
   <link rel="stylesheet" href="index.css">
 </head>
 
@@ -34,25 +34,27 @@ $CSmiirl->initUsersAccess();
       <input id="input" type="number" name="<?php echo $CSmiirl->getJsonKey(); ?>" value="<?php echo $CSmiirl->getDefaultInputValue(); ?>" placeholder="<?php echo $CSmiirl->getFirstAction()[HTML_INPUT]; ?>" required>
 			<span class="underline"></span>
       <input id="submit" type="submit" value="<?php echo reset($_ACTIONS)[HTML_SUBMIT]; ?>">
-      <?php
-      $CSmiirl->printLastLog();
-      ?>
     </div>
-  </form>
-	<footer>
-		<div>&copy;
-			<a href="//allandolle.fr" title="Web Developer and consultant SEO" rel="author">
-				Allan Dollé
-			</a>
-			<span>|</span>
-			<a href="https://github.com/blephy/simple-smiirl-counter" title="Repo of the app Simple Smiirl Counter">
-				<img src="//allandolle.fr/images/social/github-white.svg" alt="Aymeric Sans Github White Icon Svg" />
-			</a>
-			<a href="https://github.com/blephy/simple-smiirl-counter" title="Repo of the app Simple Smiirl Counter">
-			Github Repository
-			</a>
+		<div class="pin">Historique</div>
+		<div class="wrapper logger">
+			<?php
+			$CSmiirl->printLastLog(20, 'Historique');
+			?>
 		</div>
-	</footer>
+		<footer>
+			<div>
+				<a href="//allandolle.fr" title="Web Developer and consultant SEO" rel="author">
+					&copy;
+					Allan Dollé
+				</a>
+				<span>|</span>
+				<a href="https://github.com/blephy/custom-smiirl-counter-api" title="Repo of the app Simple Smiirl Counter">
+					<img src="//allandolle.fr/images/social/github-white.svg" alt="Aymeric Sans Github White Icon Svg" />
+					Github Repository
+				</a>
+			</div>
+		</footer>
+  </form>
 	<audio id="audio">
 		<source src="effect.onhover.mp3"></source>
 	</audio>

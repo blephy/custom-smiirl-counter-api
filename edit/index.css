@@ -8,6 +8,12 @@ body, html {
   font-family: "Raleway", sans-serif;
   background-image: linear-gradient(#199a8f, #24DBCC);
   color: white;
+  overflow: hidden;
+}
+@media screen and (max-width: 1069px) {
+  body, html {
+    overflow: scroll;
+  }
 }
 form {
   width: 100vw;
@@ -15,7 +21,7 @@ form {
   min-height: 100vh;
   box-sizing: border-box;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -31,7 +37,7 @@ footer {
   justify-content: center;
   align-items: center;
   margin-top: 50px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 /*footer div {
@@ -51,7 +57,7 @@ footer div {
   line-height: 20px;
   height: 20px;
   width: 280px;
-  font-size: 16px;
+  font-size: 14px;
   padding: 0;
   margin: 0;
   display: flex;
@@ -67,20 +73,28 @@ footer div a {
   width: auto;
   height: 20px;
   text-decoration: none;
-  font-size: 16px;
   line-height: 20px;
   height: 20px;
   padding: 0;
-  margin: 0 0px;
+  margin: 0;
+  transition: all 0.27s linear;
+}
+footer div a:hover {
+}
+footer div a img:hover {
+  transform: scale(1.09);
 }
 footer div span {
-  margin: 0 0px;
+  margin: 0;
 }
 footer div img {
   width: 20px;
   height: 20px;
-  margin: 0 0px 0 0;
+  float: left;
+  margin: 0;
+  margin-right: 7px;
   padding: 0;
+  transition: all 0.27s linear;
 }
 input {
   display: block;
@@ -294,7 +308,8 @@ input[type=radio]:checked ~ label{
   justify-content: center;
   -webkit-font-smoothing: antialiased;
   align-items: center;
-  transform: rotateX(-1deg);
+  transform: rotateX(-3deg);
+  margin: 20px 0px 0px 0px;
 }
 .compteur, .compteur label {
   text-align: center;
@@ -321,6 +336,66 @@ input[type=radio]:checked ~ label{
   text-decoration: none;
   color: rgba(30, 30, 30, 0.75);
   letter-spacing: 2.5px;
+  transition: all 0.17s ease-in;
+}
+.compteur a:hover {
+  box-shadow: 0 3px 7px 1px rgba(150, 76, 102, 0.37);
+}
+.logger {
+  margin: 0px;
+  box-sizing: border-box;
+  background-image: linear-gradient(rgba(20, 20, 20, 0.25), rgba(20, 20, 20, 0.4));
+  box-shadow: -4px 10px 50px 10px rgba(20, 20, 20, 0.2);
+  position: fixed;
+  height: auto;
+  max-height: 100vh;
+  top: 5px;
+  right: 0px;
+  display: block;
+  transform: none;
+  transform: translateX(235px) rotateY(-80deg);
+  transition: transform 0.37s ease-out;
+  overflow: scroll;
+  font-family: monospace;
+}
+.pin {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 60px;
+  height: auto;
+  background-color: rgba(255, 76, 102, 1);
+  transform: translate3d(0, -50%, 20px);
+  z-index: 100;
+  box-shadow: 0 3px 7px 1px rgba(150, 76, 102, 0.97);
+  transition: all 0.27s ease-out;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  text-transform: uppercase;
+  padding: 15px;
+  box-sizing: border-box;
+  line-height: 30px;
+  letter-spacing: 3px;
+}
+.pin:hover {
+  transform: translate3d(3px, -50%, 10px);
+}
+.pin:hover + .logger, .logger:hover {
+  transform: translateX(0);
+}
+@media screen and (max-width: 1000px) {
+  .logger {
+    margin: 0px;
+    margin-top: 30px;
+    position: inherit;
+    opacity: 1;
+    transform: none;
+    overflow: inherit;
+    max-height: none;
+  }
+  .pin {
+    display: none;
+  }
 }
 .log {
   display: block;
@@ -329,12 +404,20 @@ input[type=radio]:checked ~ label{
   font-size: 12px;
   width: 280px;
   line-height: 15px;
+  text-align: right;
+}
+.title {
   text-align: center;
-  font-family: monospace;
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 .line {
   background-color: rgba(20, 20, 20, 0.3);
-  margin: 1.5px 0;
+  margin: 2px 0;
+  text-align: left;
+  padding: 10px;
+  border-radius: 3px;
+  box-sizing: border-box;
 }
 .hide {
   display: none;
