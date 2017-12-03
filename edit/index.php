@@ -1,12 +1,12 @@
 <?php
-include_once '../app/simple-smiirl-counter.php';
+include_once '../app/custom-smiirl-counter-api.php';
 
-use SSmiirl\SimpleSmiirlCounter as SSmiirl;
+use CSmiirl\CustomSmiirlCounter as CSmiirl;
 
-$SSmiirl = new SSmiirl;
+$CSmiirl = new CSmiirl;
 
-$SSmiirl->initEditPage();
-$SSmiirl->initUsersAccess();
+$CSmiirl->initEditPage();
+$CSmiirl->initUsersAccess();
 ?>
 <!DOCTYPE html>
 <html>
@@ -25,17 +25,17 @@ $SSmiirl->initUsersAccess();
       <label class="compteur" for="">
         <?php echo $_HTML_COUNT; ?><br>
         <a href="//<?php echo $_ROOT_URL.$_PROJECT_FOLDER; ?>" title="Voir le fichier Json réel">
-          <?php echo $SSmiirl->getCounterValue(); ?>
+          <?php echo $CSmiirl->getCounterValue(); ?>
         </a>
       </label>
       <?php
-      $SSmiirl->printActionsRadios();
+      $CSmiirl->printActionsRadios();
       ?>
-      <input id="input" type="number" name="<?php echo $SSmiirl->getJsonKey(); ?>" value="<?php echo $SSmiirl->getDefaultInputValue(); ?>" placeholder="<?php echo $SSmiirl->getFirstAction()[HTML_INPUT]; ?>" required>
+      <input id="input" type="number" name="<?php echo $CSmiirl->getJsonKey(); ?>" value="<?php echo $CSmiirl->getDefaultInputValue(); ?>" placeholder="<?php echo $CSmiirl->getFirstAction()[HTML_INPUT]; ?>" required>
 			<span class="underline"></span>
       <input id="submit" type="submit" value="<?php echo reset($_ACTIONS)[HTML_SUBMIT]; ?>">
       <?php
-      $SSmiirl->printLastLog();
+      $CSmiirl->printLastLog();
       ?>
     </div>
   </form>

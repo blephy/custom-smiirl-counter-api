@@ -1,5 +1,5 @@
 <?php
-namespace SSmiirl;
+namespace CSmiirl;
 
 include_once 'config/actions-type.php';
 include_once 'config/logs-type.php';
@@ -20,7 +20,7 @@ use PostListener as PostListener;
 use SmiirlApi as SmiirlApi;
 use User as UserAccess;
 
-class SimpleSmiirlCounter {
+class CustomSmiirlCounter {
 
   // Available upon instantiation
   protected $_path_to_json_file;
