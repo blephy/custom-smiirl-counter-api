@@ -112,13 +112,17 @@ input[type="number"] {
   transform: scale(0, 1);
   opacity: 0;
   transition: all 0.4s ease-out;
+  text-align: center;
 }
 input[type="number"]::-webkit-input-placeholder {
   letter-spacing: normal;
   color: #EEEEEE;
+  transition: all 0.4s ease-out;
 }
-input[type="number"]:focus::-webkit-input-placeholder {
-  color: white;
+input[type="number"]:hover::-webkit-input-placeholder {
+  letter-spacing: normal;
+  color: #EEEEEE;
+  transition: all 0.4s ease-out;
 }
 input[type="number"].show:focus + .underline, input[type="number"].show:hover + .underline {
   transform: scale(1);
@@ -175,6 +179,10 @@ input[type="submit"] {
 	transition: all 1s ease;
   cursor: pointer;
 }
+input[type="submit"]:hover, input[type="submit"]:focus {
+  color: #0DFF92;
+  text-shadow: 0px 0px 10px rgba(13, 255, 146, 0.7);
+}
 input[type="radio"] {
   position: absolute;
   visibility: hidden;
@@ -225,7 +233,7 @@ label {
   display: block;
   position: absolute;
   border: 1px solid #EEEEEE;
-  border-radius: 10px;
+  border-radius: 2px;
   height: 20px;
   width: 45px;
   top: 3.5px;
@@ -238,15 +246,15 @@ label {
   display: block;
   position: absolute;
 	content: '';
-  border-radius: 7.5px 0px 0px 7.5px;
+  border-radius: 0px 2px 2px 0px;
   border: 1px solid #EEEEEE;
-  height: 15px;
-  width: 19px;
+  height: 18px;
+  width: 21px;
   top: 0;
 	left: 0;
   margin: auto;
   background-color: #EEEEEE;
-  transform: translateX(1px) translateY(1.5px);
+  transform: translateX(0) translateY(0);
 	transition: all 0.25s ease-in;
 	-webkit-transition: all 0.25s ease-in;
 }
@@ -257,13 +265,15 @@ input[type=radio]:checked ~ .check {
 input[type=radio]:checked ~ .check::before{
   background: #0DFF92;
   border: 1px solid #0DFF92;
-  border-radius: 0px 7.5px 7.5px 0px;
-  transform: translateX(22.5px) translateY(1.5px);
+  border-radius: 2px 0px 0px 2px;
+  transform: translateX(23px) translateY(0);
+  box-shadow: 0px 0px 10px 2px rgba(13, 255, 146, 0.7);
 }
 
 input[type=radio]:checked ~ label{
   color: #0DFF92;
   background-image: linear-gradient(to right, rgba(20, 20, 20, 0.15), rgba(20, 20, 20, 0) 75%);
+  text-shadow: 0px 0px 10px rgba(13, 255, 146, 0.7);
 }
 .wrapper {
   background-image: linear-gradient(rgba(20, 20, 20, 0.4), rgba(20, 20, 20, 0.25));
