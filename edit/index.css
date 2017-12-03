@@ -226,27 +226,33 @@ label {
 .group label:hover {
   color: #FFFFFF;
 }
-.group label:hover .check {
+.group label:hover + .check {
+  border: 1px solid #FFFFFF;
+  box-shadow: 0px 0px 5px 1px rgba(20, 20, 20, 0.18);
+}
+.group label:hover + .check::before {
+  background-color: #FFFFFF;
   border: 1px solid #FFFFFF;
 }
 .check {
   display: block;
   position: absolute;
   border: 1px solid #EEEEEE;
-  border-radius: 2px;
+  border-radius: 0px;
   height: 20px;
   width: 45px;
   top: 3.5px;
   right: 15px;
 	z-index: 5;
-	transition: border .25s linear;
-	-webkit-transition: border .25s linear;
+	transition: all .25s ease;
+	-webkit-transition: all .25s ease;
+  box-shadow: 0px 0px 5px 2px rgba(20, 20, 20, 0.25);
 }
 .check::before {
   display: block;
   position: absolute;
 	content: '';
-  border-radius: 0px 2px 2px 0px;
+  border-radius: 0px;
   border: 1px solid #EEEEEE;
   height: 18px;
   width: 21px;
@@ -265,7 +271,7 @@ input[type=radio]:checked ~ .check {
 input[type=radio]:checked ~ .check::before{
   background: #0DFF92;
   border: 1px solid #0DFF92;
-  border-radius: 2px 0px 0px 2px;
+  border-radius: 0px;
   transform: translateX(23px) translateY(0);
   box-shadow: 0px 0px 10px 2px rgba(13, 255, 146, 0.7);
 }
