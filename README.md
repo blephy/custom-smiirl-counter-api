@@ -22,7 +22,7 @@ This repo let you **show custom number** in your [custom smiirl counter](http://
 
 ## Demo
 <p align="center">
-<img src="https://github.com/blephy/simple-smiirl-counter/raw/master/screenshot.png" alt="User Interface of this project"/>
+<img src="https://github.com/blephy/custom-smiirl-counter-api/blob/master/screenshot.png" alt="User Interface of this project"/>
 <br>
 <br>
 <a href="//allandolle.fr/simple-smiirl-counter" title="Demo Custom Smiirl Counter API">Demo API</a>
