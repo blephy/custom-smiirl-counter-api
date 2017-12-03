@@ -60,7 +60,7 @@ You can customise actions. See `$_ACTIONS` in [config/client.php](config/client.
   - Action `ENLEVER` : Remove the input number value to the existing number
   - Action `ECRASER` : Erase the existing number by the input number value.
   - Action `AJOUTE_POURCENT` : Add input % to the existing number.
-  - Action `ENLEVE_POURCENT` : Add input % to the existing number.
+  - Action `ENLEVE_POURCENT` : Remove input % to the existing number.
   - Action `RESET` : Reset existing number to zero.
 
 - **Add a new action :**
@@ -108,7 +108,7 @@ $SSmiirl = new SSmiirl;
 | `initSmiirlApiPage()` | none | [json] | Init functions and class needed to your api custom page. Return the json data after reading .json file [:maple_leaf:](app/config/client.php)`$_PATH_JSON_FILE`.<br>**Exemple :**<br>`echo $SSmiirl->initSmiirlApiPage();` |
 | `initEditPage()` | none | null | Init the function needed to your edit custom page. Listen `$_POST[]`, Read and write json file [:maple_leaf:](app/config/client.php)`$_PATH_JSON_FILE`, read and write log file [:maple_leaf:](app/config/client.php)`$_PATH_LOG_FILE`.<br>**Exemple :**<br>` $SSmiirl->initEditPage();` |
 
-**... IN PROGRESS ...**
+<p align="center" style="font-weight: bold;">... IN PROGRESS ...</p>
 
 ## Installation
 - Just upload files in your apache or nginx server where you specify `$_PROJECT_FOLDER`.

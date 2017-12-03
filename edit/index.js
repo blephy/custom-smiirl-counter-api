@@ -8,13 +8,14 @@ audio.autoplay = false;
 audio.volume = 1;
 audio.currentTime = 0;
 audio.load();
-input.focus();
 
 input.onfocus = function() {
-  var placeholder = input.getAttribute("placeholder");
-  input.setAttribute("placeholder", '');
-  input.addEventListener("focusout", writePlaceHolder(placeholder));
+  input.dataset.oldplaceholder = input.getAttribute('placeholder');
+  input.setAttribute('placeholder', '');
 };
+input.onblur = function() {
+  input.setAttribute('placeholder', input.getAttribute('data-oldplaceholder'))
+}
 
 function autoType(element, typingSpeed, delay) {
   var selector = element;
@@ -34,21 +35,17 @@ function autoType(element, typingSpeed, delay) {
   }, delay);
 }
 
-function writePlaceHolder(placeholder) {
-  input.setAttribute("placeholder", placeholder);
-}
-
 function changeHTML(array) {
   input.setAttribute("placeholder", array[0]);
   submit.value = array[1];
   autoType(submit, 20, 0);
   if (array[2]) {
     input.classList.add("show");
-    input.focus();
+    // input.focus();
     input.value == 0 ? input.value = '' : null;
   } else {
     input.classList.remove("show");
-    submit.focus();
+    // submit.focus();
     setTimeout(function() {
       return input.value = 0;
     }, 400);
