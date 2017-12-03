@@ -238,17 +238,17 @@ label {
   display: block;
   position: absolute;
 	content: '';
-  border-radius: 7.5px;
+  border-radius: 7.5px 0px 0px 7.5px;
   border: 1px solid #EEEEEE;
   height: 15px;
-  width: 22px;
+  width: 19px;
   top: 0;
 	left: 0;
   margin: auto;
   background-color: #EEEEEE;
   transform: translateX(1px) translateY(1.5px);
-	transition: all 0.25s linear;
-	-webkit-transition: all 0.25s linear;
+	transition: all 0.25s ease-in;
+	-webkit-transition: all 0.25s ease-in;
 }
 input[type=radio]:checked ~ .check {
   border: 1px solid #0DFF92;
@@ -257,12 +257,13 @@ input[type=radio]:checked ~ .check {
 input[type=radio]:checked ~ .check::before{
   background: #0DFF92;
   border: 1px solid #0DFF92;
-  transform: translateX(20px) translateY(1.5px);
+  border-radius: 0px 7.5px 7.5px 0px;
+  transform: translateX(22.5px) translateY(1.5px);
 }
 
 input[type=radio]:checked ~ label{
   color: #0DFF92;
-  background-color: rgba(20, 20, 20, 0.15);
+  background-image: linear-gradient(to right, rgba(20, 20, 20, 0.15), rgba(20, 20, 20, 0) 75%);
 }
 .wrapper {
   background-image: linear-gradient(rgba(20, 20, 20, 0.4), rgba(20, 20, 20, 0.25));
