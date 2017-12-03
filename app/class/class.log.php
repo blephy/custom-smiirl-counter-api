@@ -73,11 +73,12 @@ class Log {
       echo '<span class="log" style="margin-top: 10px;"><strong>'.$title.'</strong></span>';
       foreach ($last_logs as $log_line) {
         $number = $this->getLogInfo($log_line, NUMBER_LOG);
-        $date= $this->getLogInfo($log_line, DATE_LOG);
+        $date = $this->getLogInfo($log_line, DATE_LOG);
+        $ip = $this->getLogInfo($log_line, IP_LOG);
         $action = $this->getLogInfo($log_line, ACTION_LOG);
         $input = $this->getLogInfo($log_line, INPUT_LOG);
         if ($number != null && $date != null && $action != null && $input != null) {
-            echo '<span class="log line">'.$date.'<br>'.$action.' '.$input.' = '.$number.'</span>';
+            echo '<span class="log line">'.$date.'<br>'.$action.' '.$input.' = '.$number.'<br>'.$ip.'</span>';
         }
       }
     }
