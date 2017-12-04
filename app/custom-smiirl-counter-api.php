@@ -168,6 +168,10 @@ class CustomSmiirlCounter {
     return $this->_counter_value;
   }
 
+  public function getDefaultTitleLog() {
+    return $this->_default_title_log;
+  }
+
   public function getDefaultInputValue() {
     return $this->_default_input_value;
   }

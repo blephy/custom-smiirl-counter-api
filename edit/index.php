@@ -35,7 +35,9 @@ $CSmiirl->initUsersAccess();
 			<span class="underline"></span>
       <input id="submit" type="submit" value="<?php echo reset($_ACTIONS)[HTML_SUBMIT]; ?>">
     </div>
-		<div class="pin">Historique</div>
+		<div class="pin">
+			<?php echo $CSmiirl->getDefaultTitleLog(); ?>
+		</div>
 		<div class="wrapper logger">
 			<?php
 			$CSmiirl->printLastLog(20, 'Historique');
@@ -48,7 +50,7 @@ $CSmiirl->initUsersAccess();
 					Allan Dollé
 				</a>
 				<span>|</span>
-				<a href="https://github.com/blephy/custom-smiirl-counter-api" title="Repo of the app Simple Smiirl Counter">
+				<a href="https://github.com/blephy/custom-smiirl-counter-api" title="Repo of the app Custom Smiirl Counter API">
 					<img src="//allandolle.fr/images/social/github-white.svg" alt="Aymeric Sans Github White Icon Svg" />
 					Github Repository
 				</a>

@@ -348,7 +348,7 @@ input[type=radio]:checked ~ label{
   background-image: linear-gradient(rgba(20, 20, 20, 0.25), rgba(20, 20, 20, 0.4));
   box-shadow: none;
   position: fixed;
-  height: auto;
+  height: 100vh;
   max-height: 100vh;
   top: 5px;
   right: 0px;
@@ -400,6 +400,7 @@ input[type=radio]:checked ~ label{
     opacity: 1;
     transform: none;
     overflow: inherit;
+    height: auto;
     max-height: none;
   }
   .pin {
@@ -432,6 +433,9 @@ input[type=radio]:checked ~ label{
   padding: 10px;
   border-radius: 3px;
   box-sizing: border-box;
+}
+.log.line:last-child {
+  margin-bottom: 15px;
 }
 .hide {
   display: none;
