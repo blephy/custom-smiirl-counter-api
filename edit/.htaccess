@@ -5,5 +5,8 @@ AuthName "My Protected Area"
 # Current .htpasswd config :
 # - Username: 'public'
 # - Password : 'smiirl counter'
+# How to change Username and Password :
+# - Go to http://www.htaccesstools.com/htpasswd-generator/
+# - Change the .htpasswd content with the generated content of the tool
 AuthUserFile /var/www/allandolle.fr/simple-smiirl-counter/edit/.htpasswd
 Require valid-user
