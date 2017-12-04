@@ -1,4 +1,9 @@
-#AuthType Basic
-#AuthName "My Protected Area"
-#AuthUserFile /var/www/allandolle.fr/simple-smiirl-counter/edit/.htpasswd
-#Require valid-user
+AuthType Basic
+AuthName "My Protected Area"
+# Please change your AuthUserFile (.htpasswd) path here.
+# Find your path by adding 'echo realpath('.htpasswd');' in edit/index.php
+# Current .htpasswd config :
+# - Username: 'public'
+# - Password : 'smiirl counter'
+AuthUserFile /var/www/allandolle.fr/simple-smiirl-counter/edit/.htpasswd
+Require valid-user

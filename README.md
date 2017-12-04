@@ -31,8 +31,8 @@ This repo let you **show custom number** in your [custom smiirl counter](http://
 <img src="https://github.com/blephy/custom-smiirl-counter-api/blob/master/screenshot-responsive-mobile.jpg" width="50%" height="50%" alt="Mobile User Interface of this project with the log pannel"/>
 <br>
 <a href="//allandolle.fr/custom-smiirl-counter-api" title="Demo Custom Smiirl Counter API">Demo API</a>
-<br>
-<a href="//allandolle.fr/custom-smiirl-counter-api/edit" title="Demo user interface to edit custom smiirl number">Demo User Interface</a>
+<br><br>
+<a href="//allandolle.fr/custom-smiirl-counter-api/edit" title="Demo user interface to edit custom smiirl number">Demo User Interface</a><br>Username : 'public'<br>Password : 'smiirl counter'
 </p>
 
 ## Requirements
