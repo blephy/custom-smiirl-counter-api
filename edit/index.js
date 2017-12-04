@@ -2,6 +2,8 @@ var radios = document.getElementsByClassName('params');
 var input = document.getElementById('input');
 var submit = document.getElementById('submit');
 var audio = document.getElementById('audio');
+var pin = document.getElementsByClassName('pin');
+var logger = document.getElementsByClassName('logger');
 
 input.classList.add("show");
 audio.autoplay = false;
@@ -16,6 +18,13 @@ input.onfocus = function() {
 input.onblur = function() {
   input.setAttribute('placeholder', input.getAttribute('data-oldplaceholder'))
 }
+logger[0].addEventListener('mouseover', function() {
+  pin[0].style.transform = 'translate3d(46px, -50%, 10px)';
+  // pin[0].style.opacity = 0;
+});
+logger[0].addEventListener('mouseleave', function() {
+  pin[0].style.transform = 'translate3d(0, -50%, 20px)';
+});
 
 function autoType(element, typingSpeed, delay) {
   var selector = element;

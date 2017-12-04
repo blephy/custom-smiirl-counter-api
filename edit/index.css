@@ -343,9 +343,10 @@ input[type=radio]:checked ~ label{
 }
 .logger {
   margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
   background-image: linear-gradient(rgba(20, 20, 20, 0.25), rgba(20, 20, 20, 0.4));
-  box-shadow: -4px 10px 50px 10px rgba(20, 20, 20, 0.2);
+  box-shadow: none;
   position: fixed;
   height: auto;
   max-height: 100vh;
@@ -361,14 +362,14 @@ input[type=radio]:checked ~ label{
 .pin {
   position: absolute;
   top: 50%;
-  left: 0;
+  right: 0;
   width: 60px;
   height: auto;
   background-color: rgba(255, 76, 102, 1);
   transform: translate3d(0, -50%, 20px);
   z-index: 100;
   box-shadow: 0 3px 7px 1px rgba(150, 76, 102, 0.97);
-  transition: all 0.27s ease-out;
+  transition: all 0.8s ease-out;
   writing-mode: vertical-lr;
   text-orientation: upright;
   text-transform: uppercase;
@@ -377,8 +378,16 @@ input[type=radio]:checked ~ label{
   line-height: 30px;
   letter-spacing: 3px;
 }
+@keyframes hiding {
+  0% {
+    transform: translate3d(0, -50%, 20px);
+  }
+  100% {
+    transform: translate3d(46px, -50%, 10px);
+  }
+}
 .pin:hover {
-  transform: translate3d(3px, -50%, 10px);
+  animation: hiding 0.27s 0s forwards alternate ease-in;
 }
 .pin:hover + .logger, .logger:hover {
   transform: translateX(0);
@@ -399,7 +408,7 @@ input[type=radio]:checked ~ label{
 }
 .log {
   display: block;
-  margin: 0;
+  margin: 15px 20px 0px 20px;
   padding: 0;
   font-size: 12px;
   width: 280px;
@@ -409,11 +418,16 @@ input[type=radio]:checked ~ label{
 .title {
   text-align: center;
   font-size: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  font-family: 'Raleway';
+  font-weight: bold;
+  font-size: 15px;
+  color: #EEEEEE;
+  text-transform: uppercase;
 }
 .line {
   background-color: rgba(20, 20, 20, 0.3);
-  margin: 2px 0;
+  margin: 0px 20px 0px 20px;
   text-align: left;
   padding: 10px;
   border-radius: 3px;

@@ -24,6 +24,8 @@ This repo let you **show custom number** in your [custom smiirl counter](http://
 <p align="center">
 <img src="https://github.com/blephy/custom-smiirl-counter-api/blob/master/screenshot.png" alt="User Interface of this project"/>
 <br>
+<p align="center">
+<img src="https://github.com/blephy/custom-smiirl-counter-api/blob/master/screenshot-log-pannel.png" alt="User Interface of this project with the log pannel"/>
 <br>
 <a href="//allandolle.fr/custom-smiirl-counter-api" title="Demo Custom Smiirl Counter API">Demo API</a>
 <br>
