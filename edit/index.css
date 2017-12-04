@@ -211,10 +211,10 @@ input[type="submit"] {
 	letter-spacing: .08em;
 	border-radius: 0;
 	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
-	-webkit-transition: all 1s ease;
-	-moz-transition: all 1s ease;
-	-o-transition: all 1s ease;
-	transition: all 1s ease;
+	-webkit-transition: all 0.39s ease;
+	-moz-transition: all 0.39s ease;
+	-o-transition: all 0.39s ease;
+	transition: all 0.39s ease;
   cursor: pointer;
 }
 input[type="submit"]:hover, input[type="submit"]:focus {
@@ -246,12 +246,11 @@ label {
   text-transform: full-width;
   word-spacing: 2px;
   padding: 0;
-  margin-bottom: 5px;
   position: relative;
 }
 .group label {
   margin: 0;
-  padding: 5px 20px;
+  padding: 8px 20px;
   display: block;
   position: relative;
   color: #EEEEEE;
@@ -279,8 +278,8 @@ label {
   border-radius: 0px;
   height: 20px;
   width: 45px;
-  top: 3.5px;
-  right: 15px;
+  top: 7px;
+  right: 19px;
 	z-index: 5;
 	transition: all .25s ease;
 	-webkit-transition: all .25s ease;
@@ -372,9 +371,10 @@ input[type=radio]:checked ~ label{
   background-image: linear-gradient(rgba(20, 20, 20, 0.25), rgba(20, 20, 20, 0.4));
   box-shadow: none;
   position: fixed;
-  height: 100vh;
-  max-height: 100vh;
-  top: 5px;
+  height: calc(100vh - 4px);
+  max-height: calc(100vh - 4px);
+  border-radius: 2px;
+  top: 2px;
   right: 0px;
   display: block;
   transform: none;

@@ -1,5 +1,5 @@
-AuthType Basic
-AuthName "My Protected Area"
+# AuthType Basic
+# AuthName "My Protected Area"
 # Please change your AuthUserFile (.htpasswd) path here.
 # Find your path by adding 'echo realpath('.htpasswd');' in edit/index.php
 # Current .htpasswd config :
@@ -8,5 +8,5 @@ AuthName "My Protected Area"
 # How to change Username and Password :
 # - Go to http://www.htaccesstools.com/htpasswd-generator/
 # - Change the .htpasswd content with the generated content of the tool
-AuthUserFile /var/www/allandolle.fr/simple-smiirl-counter/edit/.htpasswd
-Require valid-user
+# AuthUserFile /var/www/allandolle.fr/simple-smiirl-counter/edit/.htpasswd
+# Require valid-user
