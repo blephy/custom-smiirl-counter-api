@@ -13,7 +13,7 @@ $CSmiirl->initUsersAccess();
 <head>
 	<meta charset="utf-8">
 	<title>Demo Custom Smiirl Counter Api - Allan Dollé</title>
-	<meta name="description" content="Demo of the custom counter of the Smiirl company. Easy implementation of the editing action of the Custom Smiirl Counter Api.">
+	<meta name="description" content="Demo of the custom counter of the Smiirl company. Easy implementation, customize actions and interface with ease. Change the number value of your custom Smiirl counter !">
 	<meta name="robots" content="index, follow, noodp">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<meta name="msapplication-tap-highlight" content="no">
@@ -27,7 +27,7 @@ $CSmiirl->initUsersAccess();
 	<meta property="og:url" content="https://allandolle.fr/custom-smiirl-counter-api/edit/">
 	<meta property="og:title" content="Custom Smiirl Counter API - Allan Dollé">
 	<meta property="og:site_name" content="Custom Smiirl Counter API - Allan Dollé">
-  <meta property="og:description" content="Demo of the custom counter of the Smiirl company. Easy implementation of the editing action of the Custom Smiirl Counter Api.">
+  <meta property="og:description" content="Demo of the custom counter of the Smiirl company. Easy implementation, customize actions and interface with ease. Change the number value of your custom Smiirl counter !">
   <meta property="og:image" content="https://allandolle.fr/custom-smiirl-counter-api/screenshot.png">
 	<meta property="og:image:type" content="image/png" />
 	<meta property="og:image:width" content="1600" />
@@ -37,7 +37,7 @@ $CSmiirl->initUsersAccess();
 	<meta property="og:locale" content="en_EN">
 	<meta property="og:type" content="website">
 	<meta name="twitter:card" content="summary">
-  <meta name="twitter:description" content="Demo of the custom counter of the Smiirl company. Easy implementation of the editing action of the Custom Smiirl Counter Api.">
+  <meta name="twitter:description" content="Demo of the custom counter of the Smiirl company. Easy implementation, customize actions and interface with ease. Change the number value of your custom Smiirl counter !">
   <meta name="twitter:title" content="Custom Smiirl Counter API - Allan Dollé">
   <meta name="twitter:image" content="https://allandolle.fr/custom-smiirl-counter-api/screenshot.png">
   <meta name="twitter:image" content="https://allandolle.fr/custom-smiirl-counter-api/screenshot-log-panel.png">
