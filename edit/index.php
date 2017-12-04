@@ -29,6 +29,9 @@ $CSmiirl->initUsersAccess();
 	<meta property="og:site_name" content="Custom Smiirl Counter API - Allan Dollé">
   <meta property="og:description" content="Demo of the custom counter of the Smiirl company. Easy implementation of the editing action of the Custom Smiirl Counter Api.">
   <meta property="og:image" content="https://allandolle.fr/custom-smiirl-counter-api/screenshot.png">
+	<meta property="og:image:type" content="image/png" />
+	<meta property="og:image:width" content="1600" />
+	<meta property="og:image:height" content="892" />
   <meta property="og:image" content="https://allandolle.fr/custom-smiirl-counter-api/screenshot-log-panel.png">
   <meta property="og:image" content="https://allandolle.fr/custom-smiirl-counter-apiscreenshot-responsive-mobile.jpg/">
 	<meta property="og:locale" content="en_EN">
