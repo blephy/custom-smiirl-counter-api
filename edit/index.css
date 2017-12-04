@@ -35,6 +35,9 @@ body, html {
 *::-webkit-scrollbar-button {
     display: none;
 }
+*::selection {
+  background: rgba(255, 76, 102, 0.5);
+}
 form {
   width: 100vw;
   height: auto;
@@ -147,6 +150,7 @@ input[type="number"] {
   opacity: 0;
   transition: all 0.4s ease-out;
   text-align: center;
+  caret-color: #EEEEEE;
 }
 input[type="number"]::-webkit-input-placeholder {
   letter-spacing: normal;
