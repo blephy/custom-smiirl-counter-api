@@ -7,7 +7,7 @@ var logger = document.getElementsByClassName('logger');
 
 input.classList.add("show");
 audio.autoplay = false;
-audio.volume = 0.4;
+audio.volume = 0.7;
 audio.currentTime = 0;
 audio.load();
 

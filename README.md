@@ -17,7 +17,7 @@ This repo let you **show custom number** in your [custom smiirl counter](http://
 - _User Interface_ **can easily be configured** with the API in order to write your template with ease.
 - **Add your custom action and mathematical operation** setup with ease.
 - _Editing history_ **can be printed**.
-- All editing actions **are logged in [log/actions.log](log/actions.log)**.
+- All editing actions **are logged in [app/log/actions.log](app/log/actions.log)**.
 - **No MySQL database** needed.
 
 ## Demo
@@ -45,7 +45,7 @@ Please, you maybe need to read the [official documentation of Smiirl](http://sta
 ### Basic
 Edit the [config/client.php](config/client.php) file as you want.
 
-**You can just edit `$_PROJECT_FOLDER` and you are good to go**
+**You can just edit `$_PROJECT_FOLDER` and you are good to go !**
 
 - `$_PROJECT_FOLDER` : absolute path of the folder which contain this project on your remote server
 - `$_PATH_JSON_FILE` : the path to .json file relative to `$_PROJECT_FOLDER`
@@ -89,7 +89,7 @@ You can customise actions. See `$_ACTIONS` in [config/client.php](config/client.
 ```
 
 ### Customise User Interface
-Just learn CSS language and edit [edit/index.css](edit/index.css)
+Just learn CSS language and see [edit/index.css](edit/index.css)
 
 ### API
 You can construct your home made solution. **You need to add this php code on every top** of your
