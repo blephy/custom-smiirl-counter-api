@@ -16,8 +16,46 @@ $CSmiirl->initUsersAccess();
 	<meta name="description" content="Demo of the custom counter of the Smiirl company. Easy implementation of the editing action of the Custom Smiirl Counter Api.">
 	<meta name="robots" content="index, follow, noodp">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="application-name" content="Custom Smiirl Counter API">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#199a8f">
+  <meta name="apple-mobile-web-app-title" content="Custom Smiirl Counter API">
+	<meta name="theme-color" content="#199a8f">
   <link rel="stylesheet" href="index.css">
+	<meta property="og:url" content="https://allandolle.fr/custom-smiirl-counter-api/edit/">
+	<meta property="og:title" content="Custom Smiirl Counter API - Allan Dollé">
+	<meta property="og:site_name" content="Custom Smiirl Counter API - Allan Dollé">
+  <meta property="og:description" content="Demo of the custom counter of the Smiirl company. Easy implementation of the editing action of the Custom Smiirl Counter Api.">
+  <meta property="og:image" content="https://allandolle.fr/custom-smiirl-counter-api/screenshot.png">
+  <meta property="og:image" content="https://allandolle.fr/custom-smiirl-counter-api/screenshot-log-panel.png">
+  <meta property="og:image" content="https://allandolle.fr/custom-smiirl-counter-apiscreenshot-responsive-mobile.jpg/">
+	<meta property="og:locale" content="en_EN">
+	<meta property="og:type" content="website">
+	<meta name="twitter:card" content="summary">
+  <meta name="twitter:description" content="Demo of the custom counter of the Smiirl company. Easy implementation of the editing action of the Custom Smiirl Counter Api.">
+  <meta name="twitter:title" content="Custom Smiirl Counter API - Allan Dollé">
+  <meta name="twitter:image" content="https://allandolle.fr/custom-smiirl-counter-api/screenshot.png">
+  <meta name="twitter:image" content="https://allandolle.fr/custom-smiirl-counter-api/screenshot-log-panel.png">
+  <meta name="twitter:image" content="https://allandolle.fr/custom-smiirl-counter-apiscreenshot-responsive-mobile.jpg/">
+  <link rel="canonical" href="https://allandolle.fr/custom-smiirl-counter-api/edit/">
 </head>
+<script>(function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-96248110-1', 'auto');
+    ga('send', 'pageview');
+</script>
 
 <body>
   <form class="" action="" method="post">
