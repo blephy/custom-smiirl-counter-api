@@ -20,7 +20,6 @@ input.onblur = function() {
 }
 logger[0].addEventListener('mouseover', function() {
   pin[0].style.transform = 'translate3d(46px, -50%, 10px)';
-  // pin[0].style.opacity = 0;
 });
 logger[0].addEventListener('mouseleave', function() {
   pin[0].style.transform = 'translate3d(0, -50%, 20px)';

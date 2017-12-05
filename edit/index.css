@@ -404,15 +404,15 @@ input[type=radio]:checked ~ label{
   letter-spacing: 3px;
 }
 @keyframes hiding {
-  0% {
+  from {
     transform: translate3d(0, -50%, 20px);
   }
-  100% {
+  to {
     transform: translate3d(46px, -50%, 10px);
   }
 }
 .pin:hover {
-  animation: hiding 0.27s 0s forwards alternate ease-in;
+  animation: hiding 0.27s 0.1s both ease-in;
 }
 .pin:hover + .logger, .logger:hover {
   transform: translateX(0);

@@ -31,7 +31,9 @@ class ActionRadios {
                   "'.$value[HTML_SUBMIT].'",
                   "'.$value[DISPLAY_INPUT].'"
                 ]);
-                audio.play();
+                setTimeout(function () {
+                  audio.play();
+                }, 180);
               }
               </script>');
         $checked = '';
