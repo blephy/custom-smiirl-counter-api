@@ -97,20 +97,20 @@ You can construct your home made solution. **You need to add this php code on ev
 ```php
 // Exemple of include
 // Edit this include path with your directive directory
-include_once 'app/simple-smiirl-counter.php';
+include_once 'app/custom-smiirl-counter-api.php';
 
-use SSmiirl\SimpleSmiirlCounter as SSmiirl;
+use CSmiirl\CSmiirl as CSmiirl;
 
-$SSmiirl = new SSmiirl;
+$CSmiirl = new CSmiirl;
 ```
 
 **Legend :**
 - :maple_leaf: --> [Configuration file](app/config/client.php)
 
-| SSmiirl method | Params | Return | Description and exemple |
+| CSmiirl method | Params | Return | Description and exemple |
 | :---: | :---: | :---: | :--- |
-| `initSmiirlApiPage()` | none | [json] | Init functions and class needed to your api custom page. Return the json data after reading .json file [:maple_leaf:](app/config/client.php)`$_PATH_JSON_FILE`.<br>**Exemple :**<br>`echo $SSmiirl->initSmiirlApiPage();` |
-| `initEditPage()` | none | null | Init the function needed to your edit custom page. Listen `$_POST[]`, Read and write json file [:maple_leaf:](app/config/client.php)`$_PATH_JSON_FILE`, read and write log file [:maple_leaf:](app/config/client.php)`$_PATH_LOG_FILE`.<br>**Exemple :**<br>` $SSmiirl->initEditPage();` |
+| `initSmiirlApiPage()` | none | [json] | Init functions and class needed to your api custom page. Return the json data after reading .json file [:maple_leaf:](app/config/client.php)`$_PATH_JSON_FILE`.<br>**Exemple :**<br>`echo $CSmiirl->initSmiirlApiPage();` |
+| `initEditPage()` | none | null | Init the function needed to your edit custom page. Listen `$_POST[]`, Read and write json file [:maple_leaf:](app/config/client.php)`$_PATH_JSON_FILE`, read and write log file [:maple_leaf:](app/config/client.php)`$_PATH_LOG_FILE`.<br>**Exemple :**<br>` $CSmiirl->initEditPage();` |
 
 <p align="center" style="font-weight: bold;">... IN PROGRESS ...</p>
 

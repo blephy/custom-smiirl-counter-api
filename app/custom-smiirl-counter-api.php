@@ -20,7 +20,7 @@ use PostListener as PostListener;
 use SmiirlApi as SmiirlApi;
 use User as UserAccess;
 
-class CustomSmiirlCounter {
+class CSmiirl {
 
   // Available upon instantiation
   protected $_path_to_json_file;
