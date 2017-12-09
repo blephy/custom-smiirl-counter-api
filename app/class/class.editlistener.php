@@ -1,5 +1,5 @@
 <?php
-class PostListener {
+class EditListener {
 
   protected $_app;
   protected $_max_number;

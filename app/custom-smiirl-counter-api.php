@@ -9,14 +9,14 @@ include_once 'config/client.php';
 include_once 'class/class.file.php';
 include_once 'class/class.log.php';
 include_once 'class/class.smiirlapi.php';
-include_once 'class/class.postlistener.php';
+include_once 'class/class.editlistener.php';
 include_once 'class/class.actionradio.php';
 include_once 'class/class.user.php';
 
 use File as JsonFile;
 use Log as LogFile;
 use ActionRadios as ActionRadios;
-use PostListener as PostListener;
+use EditListener as EditListener;
 use SmiirlApi as SmiirlApi;
 use User as UserAccess;
 
@@ -110,7 +110,7 @@ class CSmiirl {
   }
 
   public function initEditPage() {
-    $this->_post_listener_instance = new PostListener($this);
+    $this->_post_listener_instance = new EditListener($this);
   }
 
   public function initSmiirlApiPage() {
