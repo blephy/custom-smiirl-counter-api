@@ -6,7 +6,7 @@ var pin = document.getElementsByClassName('pin');
 var logger = document.getElementsByClassName('logger');
 
 input.classList.add("show");
-audio.autoplay = false;
+audio.autoplay = true;
 audio.volume = 0.7;
 audio.currentTime = 0;
 audio.load();

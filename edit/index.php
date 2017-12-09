@@ -98,10 +98,10 @@ $CSmiirl->initUsersAccess();
 			</div>
 		</footer>
   </form>
+	<?php if ( $_ACTIVE_EASTER_EGGS ) { include '../template/easter-egg.php';} ?>
 	<audio id="audio">
 		<source src="soundeffect.radio.clic.mp3"></source>
 	</audio>
-  <?php if ( $_ACTIVE_EASTER_EGGS ) { include '../template/easter-egg.php';} ?>
   <script type="text/javascript" src="index.js"></script>
 </body>
 

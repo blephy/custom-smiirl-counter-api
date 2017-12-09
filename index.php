@@ -1,7 +1,7 @@
 <?php
 include_once 'app/custom-smiirl-counter-api.php';
 
-use CSmiirl\CustomSmiirlCounter as CSmiirl;
+use CSmiirl\CSmiirl as CSmiirl;
 
 $CSmiirl = new CSmiirl;
 
