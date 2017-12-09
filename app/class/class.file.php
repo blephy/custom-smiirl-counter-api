@@ -18,6 +18,12 @@ class File {
 
   public function initFile() {
     $temp = json_encode([$this->_app->getJsonKey() => 0]);
+    $parts = explode('/', $this->_app->getJsonFilePath());
+    $file = array_pop($parts);
+    $dir = '';
+    foreach($parts as $part) {
+      if(!is_dir($dir .= "/$part")) mkdir($dir);
+    }
     return file_put_contents($this->_app->getJsonFilePath(), $temp, LOCK_EX);
   }
 
