@@ -45,12 +45,13 @@ Please, you maybe need to read the [official documentation of Smiirl](http://sta
 ### Basic
 Edit the [config/client.php](config/client.php) file as you want.
 
-**You can just edit `$_PROJECT_FOLDER` and you are good to go !**
+***You can just edit `$_PROJECT_FOLDER` and you are good to go !***
 
 - `$_PROJECT_FOLDER` : absolute path of the folder which contain this project on your remote server
 - `$_PATH_JSON_FILE` : the path to .json file relative to `$_PROJECT_FOLDER`
 - `$_PATH_LOG_FILE` : the path to .log file relative to `$_PROJECT_FOLDER`
-- `$_KEY_NAME` : the name of the key relative to the number in your .json file
+- `$_KEY_NAME` : the name of the key relative to the number in your .json file (exemple : `number` or `likes` or `count`)
+- `$_MAX_DIGIT_COUNTER`: set your max digit number counter. (exemple : `5` for [5 digit counter Smiirl](https://www.smiirl.com/fr/compteur/custom#5D), `7` for the [7 digit counter Smiirl](https://www.smiirl.com/fr/compteur/custom#7D))
 - `$_ACTIVE_EASTER_EGGS` : Active easter eggs after submitting new number value
 - `$_DEFAULT_INPUT_VALUE` : The default input value of the form
 - `$_HTML_COUNT` : The output HTML in top of counter's number
