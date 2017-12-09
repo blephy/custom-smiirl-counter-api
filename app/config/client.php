@@ -29,6 +29,11 @@ $_PATH_LOG_FILE = '/log/actions.log';
 // [STRING]
 $_KEY_NAME = 'number';
 
+// Max number value of your counter.
+// Type 5 if you have a 5 digit counter Smiirl
+// Type 7 if you have a 7 digit counter Smiirl
+$_MAX_DIGIT_COUNTER = 7;
+
 // Active or not easter eggs after submitting new number value.
 // [BOOLEAN]
 $_ACTIVE_EASTER_EGGS = false;

@@ -27,6 +27,7 @@ class CSmiirl {
   protected $_path_to_log_file;
 
   protected $_json_key;
+  protected $_max_digit_counter;
   protected $_actions;
   protected $_users;
   protected $_default_input_value;
@@ -47,6 +48,7 @@ class CSmiirl {
   public function __construct($path_to_json_file = null,
                               $path_to_log_file = null,
                               $json_key = null,
+                              $max_counter = null,
                               $actions = null,
                               $users = null,
                               $default_input_value = null,
@@ -55,6 +57,7 @@ class CSmiirl {
            $_PATH_JSON_FILE,
            $_PATH_LOG_FILE,
            $_KEY_NAME,
+           $_MAX_DIGIT_COUNTER,
            $_ACTIONS,
            $_USERS,
            $_DEFAULT_INPUT_VALUE,
@@ -74,6 +77,11 @@ class CSmiirl {
       $this->_json_key = $json_key;
     } else {
       $this->_json_key = $_KEY_NAME;
+    }
+    if ($max_counter != null) {
+      $this->_max_digit_counter = $max_counter;
+    } else {
+      $this->_max_digit_counter = $_MAX_DIGIT_COUNTER;
     }
     if ($actions != null) {
       $this->_actions = $actions;
@@ -129,6 +137,10 @@ class CSmiirl {
 
   public function getJsonKey() {
     return $this->_json_key;
+  }
+
+  public function getMaxDigitCounter() {
+    return $this->_max_digit_counter;
   }
 
   public function getFileInstance() {

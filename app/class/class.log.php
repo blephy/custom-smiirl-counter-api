@@ -17,7 +17,7 @@ class Log {
   }
 
   public function initLog() {
-    $parts = explode('/', $this->_app->getJsonFilePath());
+    $parts = explode('/', $this->_app->getLogFilePath());
     $file = array_pop($parts);
     $dir = '';
     foreach($parts as $part) {
