@@ -31,7 +31,7 @@ $_KEY_NAME = 'number';
 
 // Active or not easter eggs after submitting new number value.
 // [BOOLEAN]
-$_ACTIVE_EASTER_EGGS = true;
+$_ACTIVE_EASTER_EGGS = false;
 
 // Default value for the input value
 // [STRING]
