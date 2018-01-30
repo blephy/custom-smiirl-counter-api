@@ -5,11 +5,7 @@ class Log {
   protected $_content;
 
   public function __construct($app = null) {
-    if ($app != null) {
-      $this->_app = $app;
-    } else {
-      die("App instance not linked to Log instance");
-    }
+    $this->_app = ( $app ?? die("App instance not linked to Log instance") );
   }
 
   public function isLogExist() {

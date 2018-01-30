@@ -5,11 +5,7 @@ class File {
   protected $_content;
 
   public function __construct($app = null) {
-    if ($app != null) {
-      $this->_app = $app;
-    } else {
-      die("App instance not linked to File instance");
-    }
+    $this->_app = ( $app ?? die("App instance not linked to File instance") );
   }
 
   public function isFileExist() {

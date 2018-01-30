@@ -4,25 +4,17 @@ class User {
   protected $_app;
   protected $_name;
   protected $_password;
-  protected $_access_type;
+  protected $_access_actions;
+  protected $_access_functionality;
 
   public function __construct($app = null,
                               $name = null,
                               $params = null) {
-    if ($app != null) {
-      $this->_app = $app;
-    } else {
-      die("App instance not linked to User instance");
-    }
-    if ($name != null) {
-      $this->_name = $name;
-    } else {
-      die("User name empty");
-    }
-    if ($params != null) {
-      $this->_password = $params[PASSWORD];
-      $this->_access_type = $params[ACCESS_TYPE];
-    }
+    $this->_app = ( $app ?? die("App instance not linked to User instance") );
+    $this->_name = ( $name ?? die("User name empty") );
+    $this->_password = ( $params[PASSWORD] ?? die("User password empty") );
+    $this->_access_actions = ( $params[ACCESS_ACTIONS] ?? die("User access actions empty") );
+    $this->_access_functionality = ( $params[ACCESS_FUNCTIONALITY] ?? die("User access functionality empty") );
     return $this;
   }
 }

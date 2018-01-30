@@ -1,3 +1,0 @@
-<?php
-CONST RADIO_PARAMS = 'RADIO_PARAMS';
-?>

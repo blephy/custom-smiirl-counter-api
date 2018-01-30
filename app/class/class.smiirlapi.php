@@ -4,12 +4,8 @@ class SmiirlApi {
   protected $_app;
 
   public function __construct($app = null) {
-    if ($app != null) {
-      $this->_app = $app;
-      $this->initSmiirlApiPage();
-    } else {
-      die("App instance not linked to SmiirlApiPage instance");
-    }
+    $this->_app = ( $app ?? die("App instance not linked to SmiirlApiPage instance") );
+    $this->initSmiirlApiPage();
   }
 
   public function initSmiirlApiPage() {

@@ -1,15 +1,21 @@
 <?php
 namespace CSmiirl;
 
-include_once 'config/actions-type.php';
-include_once 'config/logs-type.php';
-include_once 'config/params-type.php';
-include_once 'config/users-type.php';
+// Load CONST
+include_once 'config/type/type.actions.php';
+include_once 'config/type/type.logs.php';
+include_once 'config/type/type.params.php';
+include_once 'config/type/type.users.php';
+
+// Load Config
 include_once 'config/client.php';
+
+// Load Class
 include_once 'class/class.file.php';
 include_once 'class/class.log.php';
 include_once 'class/class.smiirlapi.php';
 include_once 'class/class.editlistener.php';
+include_once 'class/class.cookielistener.php';
 include_once 'class/class.actionradio.php';
 include_once 'class/class.user.php';
 
@@ -17,6 +23,7 @@ use File as JsonFile;
 use Log as LogFile;
 use ActionRadios as ActionRadios;
 use EditListener as EditListener;
+use CookieListener as CookieListener;
 use SmiirlApi as SmiirlApi;
 use User as UserAccess;
 
@@ -40,86 +47,61 @@ class CSmiirl {
   protected $_users_instances;
 
   // Available after calling a specific method
-  protected $_post_listener_instance;
+  protected $_edit_listener_instance;
+  protected $_cookie_instance;
   protected $_smiirlapi_instance;
   protected $_counter_value;
 
   // Instantiation function
   public function __construct($path_to_json_file = null,
-                              $path_to_log_file = null,
-                              $json_key = null,
-                              $max_counter = null,
-                              $actions = null,
-                              $users = null,
-                              $default_input_value = null,
-                              $default_title_log = null) {
+  $path_to_log_file = null,
+  $json_key = null,
+  $max_counter = null,
+  $actions = null,
+  $users = null,
+  $default_input_value = null,
+  $default_title_log = null) {
     global $_APP_FOLDER,
-           $_PATH_JSON_FILE,
-           $_PATH_LOG_FILE,
-           $_KEY_NAME,
-           $_MAX_DIGIT_COUNTER,
-           $_ACTIONS,
-           $_USERS,
-           $_DEFAULT_INPUT_VALUE,
-           $_DEFAULT_TITLE_LOG;
+    $_PATH_JSON_FILE,
+    $_PATH_LOG_FILE,
+    $_KEY_NAME,
+    $_MAX_DIGIT_COUNTER,
+    $_ACTIONS,
+    $_USERS,
+    $_DEFAULT_INPUT_VALUE,
+    $_DEFAULT_TITLE_LOG;
 
-    if ($path_to_json_file != null) {
-      $this->_path_to_json_file = $path_to_json_file;
-    } else {
-      $this->_path_to_json_file = $_APP_FOLDER.$_PATH_JSON_FILE;
-    }
-    if ($path_to_log_file != null) {
-      $this->_path_to_log_file = $path_to_log_file;
-    } else {
-      $this->_path_to_log_file = $_APP_FOLDER.$_PATH_LOG_FILE;
-    }
-    if ($json_key != null) {
-      $this->_json_key = $json_key;
-    } else {
-      $this->_json_key = $_KEY_NAME;
-    }
-    if ($max_counter != null) {
-      $this->_max_digit_counter = $max_counter;
-    } else {
-      $this->_max_digit_counter = $_MAX_DIGIT_COUNTER;
-    }
-    if ($actions != null) {
-      $this->_actions = $actions;
-    } else {
-      $this->_actions = $_ACTIONS;
-    }
-    if ($users != null) {
-      $this->_users = $users;
-    } else {
-      $this->_users = $_USERS;
-    }
-    if ($default_input_value != null) {
-      $this->_default_input_value = $default_input_value;
-    } else {
-      $this->_default_input_value = $_DEFAULT_INPUT_VALUE;
-    }
-    if ($default_title_log != null) {
-      $this->_default_title_log = $default_title_log;
-    } else {
-      $this->_default_title_log = $_DEFAULT_TITLE_LOG;
-    }
-
-    $this->_file_instance = new JsonFile($this);
-    $this->_log_instance = new LogFile($this);
-    $this->_actionradios_instance = new ActionRadios($this);
+    $this->_path_to_json_file = ( $path_to_json_file ?? $_APP_FOLDER.$_PATH_JSON_FILE );
+    $this->_path_to_log_file = ( $path_to_log_file ?? $_APP_FOLDER.$_PATH_LOG_FILE );
+    $this->_json_key = ( $json_key ?? $_KEY_NAME );
+    $this->_max_digit_counter = ( $max_counter ?? $_MAX_DIGIT_COUNTER );
+    $this->_actions = ( $actions ?? $_ACTIONS );
+    $this->_users = ( $users ?? $_USERS );
+    $this->_default_input_value = ( $default_input_value ?? $_DEFAULT_INPUT_VALUE );
+    $this->_default_title_log = ( $default_title_log ?? $_DEFAULT_TITLE_LOG );
   }
 
   public function initEditPage() {
-    $this->_post_listener_instance = new EditListener($this);
+    $this->initUsersAccess();
+    $this->_cookie_instance = new CookieListener;
+    if ( $this->_cookie_instance->getUsername() != null ) {
+
+    }
+    $this->_file_instance = new JsonFile($this);
+    $this->_log_instance = new LogFile($this);
+    $this->_edit_listener_instance = new EditListener($this);
+    $this->_actionradios_instance = new ActionRadios($this);
   }
 
   public function initSmiirlApiPage() {
+    $this->_file_instance = new JsonFile($this);
+    $this->_log_instance = new LogFile($this);
     $this->_smiirlapi_instance = new SmiirlApi($this);
   }
 
   public function initUsersAccess() {
-    foreach ($this->_users as $key => $value) {
-      $this->users_instances[] =  new UserAccess($this, $key, $value);
+    foreach ($this->_users as $username => $params) {
+      $this->users_instances[] = new UserAccess($this, $username, $params);
     }
   }
 

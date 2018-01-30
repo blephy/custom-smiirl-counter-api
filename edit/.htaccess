@@ -1,4 +1,4 @@
-# If you whant to protect your edit interface, uncomment lines below
+# If you want to protect your edit interface, uncomment lines below
 # Please change your AuthUserFile (.htpasswd) path here.
 # Find your path by adding 'echo realpath('.htpasswd');' in edit/index.php
 # Current .htpasswd config :

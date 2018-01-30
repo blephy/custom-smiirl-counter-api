@@ -36,7 +36,7 @@ $_MAX_DIGIT_COUNTER = 7;
 
 // Active or not easter eggs after submitting new number value.
 // [BOOLEAN]
-$_ACTIVE_EASTER_EGGS = false;
+$_ACTIVE_EASTER_EGGS = true;
 
 // Default value for the input value
 // [STRING]
@@ -127,13 +127,19 @@ $_ACTIONS = [
 
 // User Account for Edit Action
 $_USERS = [
-  'Custom' => [
-    PASSWORD => 'smiirl',
-    ACCESS_TYPE => WRITE_ACCESS
-  ],
-  EVERYONE => [
-    PASSWORD => null,
-    ACCESS_TYPE => READ_ACCESS
+  'Blephy' => [
+    PASSWORD => 'custom smiirl',
+    ACCESS_ACTIONS => [
+      'AJOUTER',
+      'ENLEVER',
+      'ECRASER',
+      'AJOUTE_POURCENT',
+      'ENLEVE_POURCENT',
+      'RESET'
+    ],
+    ACCESS_FUNCTIONALITY => [
+      LOG
+    ]
   ]
 ];
 

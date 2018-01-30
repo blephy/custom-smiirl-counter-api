@@ -5,12 +5,8 @@ class EditListener {
   protected $_max_number;
 
   public function __construct($app = null) {
-    if ($app != null) {
-      $this->_app = $app;
-      $this->initEditPage();
-    } else {
-      die("App instance not linked to PostListener instance");
-    }
+    $this->_app = ( $app ?? die("App instance not linked to EditListener instance") );
+    $this->initEditPage();
   }
 
   public function initEditPage() {

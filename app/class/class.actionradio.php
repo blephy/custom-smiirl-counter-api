@@ -4,11 +4,7 @@ class ActionRadios {
   protected $_app;
 
   public function __construct($app = null) {
-    if ($app != null) {
-      $this->_app = $app;
-    } else {
-      die("App instance not linked to ActionRadios instance");
-    }
+    $this->_app = ( $app ?? die("App instance not linked to ActionRadios instance") );
   }
 
   public function printHtmlRadios($actions = null) {
